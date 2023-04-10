@@ -1,0 +1,307 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.18f1 (3129e69bc0c7) revision 3221990'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 15776 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60612
+Successfully changed project path to: C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame
+C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [27932] Host "[IP] 172.27.217.248 [Port] 0 [Flags] 2 [Guid] 2914438088 [EditorId] 2914438088 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J1FR71LJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [27932] Host "[IP] 172.27.217.248 [Port] 0 [Flags] 2 [Guid] 2914438088 [EditorId] 2914438088 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J1FR71LJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 75.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 Laptop GPU (ID=0x249c)
+    Vendor:   NVIDIA
+    VRAM:     8042 MB
+    Driver:   30.0.15.1278
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56804
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006418 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 66.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.598 seconds
+Domain Reload Profiling:
+	ReloadAssembly (598ms)
+		BeginReloadAssembly (87ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (408ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (98ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (238ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (66ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (121ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005525 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\rawkd\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\rawkd\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.800 seconds
+Domain Reload Profiling:
+	ReloadAssembly (801ms)
+		BeginReloadAssembly (100ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (604ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (197ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (274ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (183ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3048 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (113.4 KB). Loaded Objects now: 3508.
+Memory consumption went from 107.4 MB to 107.3 MB.
+Total: 2.835700 ms (FindLiveObjects: 0.255800 ms CreateObjectMapping: 0.087800 ms MarkObjects: 2.373200 ms  DeleteObjects: 0.118000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 19085.036593 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.011184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.294390 seconds.
+  path: Assets/Pacman Assets
+  artifactKey: Guid(f1a96851e75975747b05e43f14d58eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets using Guid(f1a96851e75975747b05e43f14d58eb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '116f627edff08b84b2595b9692f46971') in 0.010087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 82.573809 seconds.
+  path: Assets/Pacman Assets/pacmanstuff
+  artifactKey: Guid(db7ea493b4ed0594eaf23bf14e7ef2df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff using Guid(db7ea493b4ed0594eaf23bf14e7ef2df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbce02158975bc9a195541991fd8e124') in 0.011553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.485536 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/Demo scene
+  artifactKey: Guid(20ddc15f9239b0c44a57536e6f6a6da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/Demo scene using Guid(20ddc15f9239b0c44a57536e6f6a6da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92bb2c240810d707d9bec9ed54e0757') in 0.009728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.058891 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/Demo scene/ColorMap.psd
+  artifactKey: Guid(0ff02fea4cd5b694ca21add2736f3bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/Demo scene/ColorMap.psd using Guid(0ff02fea4cd5b694ca21add2736f3bbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '749ba701b547c931a64774870ad900d3') in 0.069943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.024013 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/Other stuff
+  artifactKey: Guid(0bef48e5304b1b645b485f8bdc93818a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/Other stuff using Guid(0bef48e5304b1b645b485f8bdc93818a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '422d669c15e951d71de9872a3f13d96b') in 0.011692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.032106 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/Other stuff/ColorMap.psd
+  artifactKey: Guid(5c34c0303e1cb4246bd4bf2d3105fa1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/Other stuff/ColorMap.psd using Guid(5c34c0303e1cb4246bd4bf2d3105fa1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ed8f334cf98baf8eab806b816a2b78f') in 0.008731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.833283 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/Other stuff/Wall Pieces
+  artifactKey: Guid(f7c2cec949eafa748b4b8028fc51f8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/Other stuff/Wall Pieces using Guid(f7c2cec949eafa748b4b8028fc51f8cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0c568e3dff05967c4f02f741d02f8c0') in 0.010080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.126444 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack
+  artifactKey: Guid(2f5c5cc816cb38f44a674de4077ee018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack using Guid(2f5c5cc816cb38f44a674de4077ee018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c342c0d65f1f5a00d5cb2dce7de4000') in 0.010063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.046211 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/ColorMap.psd
+  artifactKey: Guid(e5202ffeca569174fb0d831a861bbe41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/ColorMap.psd using Guid(e5202ffeca569174fb0d831a861bbe41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0bbfe057e3bd4bea3649dbcf6feabcf') in 0.009291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.715083 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/Characters
+  artifactKey: Guid(bd60d35d9f54e5b429b4ad0e82dd6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/Characters using Guid(bd60d35d9f54e5b429b4ad0e82dd6fd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159589fc957e624405aa3d29782a52d4') in 0.009611 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.130200 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/Wall Pieces
+  artifactKey: Guid(5bce8ffae1c16754fb009c6f4887d911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/Wall Pieces using Guid(5bce8ffae1c16754fb009c6f4887d911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45658c7866a81844865fbfad2fd144a7') in 0.003200 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.098013 seconds.
+  path: Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/Wall Pieces/Wall01.FBX
+  artifactKey: Guid(7b24c60367b8cb44694fb57662645938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pacman Assets/pacmanstuff/PacMan FBX Pack/Wall Pieces/Wall01.FBX using Guid(7b24c60367b8cb44694fb57662645938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a26f5f87b86ebfd93959260b8dfa55eb') in 0.371478 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004044 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\rawkd\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\rawkd\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.002 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1003ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (774ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (339ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (219ms)
+				ProcessInitializeOnLoadMethodAttributes (21ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3043 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 17 unused Assets / (79.7 KB). Loaded Objects now: 3557.
+Memory consumption went from 112.3 MB to 112.2 MB.
+Total: 3.978200 ms (FindLiveObjects: 0.280100 ms CreateObjectMapping: 0.203700 ms MarkObjects: 3.396200 ms  DeleteObjects: 0.097500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
