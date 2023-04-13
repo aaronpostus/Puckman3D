@@ -192,3 +192,7 @@ Received Import Request.
   path: Assets/OctoMan/3D Models/Pinky.FBX
   artifactKey: Guid(a583b3c7bbad8ca49949fa2404417b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/OctoMan/3D Models/Pinky.FBX using Guid(a583b3c7bbad8ca49949fa2404417b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0759d7986f7be647e827a9a7c08b1ba') in 0.045808 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

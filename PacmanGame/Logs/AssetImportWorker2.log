@@ -180,3 +180,7 @@ Received Import Request.
   path: Assets/OctoMan/3D Models/Strawberry.FBX
   artifactKey: Guid(e54b9e2dac2f1cd419496b8b84e386f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/OctoMan/3D Models/Strawberry.FBX using Guid(e54b9e2dac2f1cd419496b8b84e386f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792d8f8cd0c48d83201e56bcee76488a') in 0.098737 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
