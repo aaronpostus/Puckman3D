@@ -57,6 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Ghost.cs" />
+    <Compile Include="Assets\Scripts\GhostChaseState.cs" />
+    <Compile Include="Assets\Scripts\GhostFleeState.cs" />
+    <Compile Include="Assets\Scripts\GhostWanderState.cs" />
+    <Compile Include="Assets\Scripts\IGhostState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
