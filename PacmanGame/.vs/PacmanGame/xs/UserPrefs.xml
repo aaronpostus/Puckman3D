@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{083F2775-9417-06C1-6DF8-CDC0FCA4C92D}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="20109bbc-507c-499e-80bd-866ebe47a612" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PacmanInputs.cs">
+    <Files>
+      <File FileName="Assets/PacmanInputs.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PacmanGame" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+</Properties>
