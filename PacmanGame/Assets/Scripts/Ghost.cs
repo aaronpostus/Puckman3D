@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 
 public class Ghost : MonoBehaviour
 {
@@ -9,35 +9,38 @@ public class Ghost : MonoBehaviour
     public GhostChaseState chaseState = new GhostChaseState();
     public GhostFleeState fleeState = new GhostFleeState();
 
+    [SerializeField] private NavMeshAgent agent;
+
     private IGhostState currentState;
-    private float sightRange = 9f; //sight range will be as long as level's length/width 
+    private float sightRange = 9f; //sight range will be as long as level's length/width but should not see through walls
     private List<Ray> sightRays = new List<Ray>();
     private Vector3 currentDirection;
     private Vector3 initialPosition;
     private Vector3 direction1;
-    private Vector3 direction2;
-    private Vector3 direction3;
+    private Vector3 destination;
+    //private Vector3 direction2;
+    //private Vector3 direction3;
 
     private void OnEnable()
     {
         currentDirection = transform.forward;
-        currentState = wanderState;
+        currentState = chaseState;
         initialPosition = transform.position;
         SetDirections();
     }
 
     private void SetDirections()
     {
-        //3 sight rays (forward, left, right)
+        //3 sight rays (forward, left, right) ? 1?
         direction1 = Vector3.forward;
-        direction2 = Vector3.left;
-        direction3 = Vector3.right;
+        //direction2 = Vector3.left;
+        //direction3 = Vector3.right;
 
     }
 
     void Update()
     {
-        currentState = currentState.DoState(this, currentDirection);
+        currentState = currentState.DoState(this, currentDirection, agent, destination);
         UpdateSight();
         DrawRays();
         CheckForPacman();
@@ -50,8 +53,8 @@ public class Ghost : MonoBehaviour
     private void UpdateSight()
     {
         sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction1 * sightRange)));
-        sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction2 * sightRange)));
-        sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction3 * sightRange)));
+        //sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction2 * sightRange)));
+        //sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction3 * sightRange)));
     }
 
     private void CheckForPacman()
@@ -65,8 +68,9 @@ public class Ghost : MonoBehaviour
                 if (hit.collider.CompareTag("Player"))
                 {
                     Debug.Log("Ghost sees pacman");
-                    //set current direction to direction of ray hit and change state to chase
+                    //set destination to pacman's current location, pass in as argument
                     currentDirection = sightRays[i].direction;
+                    destination = hit.transform.position;
                     //should enter this state when sees pacman and go to last known location pacman was in
                     currentState = chaseState;
                     break;
@@ -80,9 +84,8 @@ public class Ghost : MonoBehaviour
     private void DrawRays()
     {
         Debug.DrawRay(transform.position, transform.TransformDirection(direction1 * sightRange), Color.red);
-        Debug.DrawRay(transform.position, transform.TransformDirection(direction2 * sightRange), Color.red);
-        Debug.DrawRay(transform.position, transform.TransformDirection(direction3 * sightRange), Color.red);
+        //Debug.DrawRay(transform.position, transform.TransformDirection(direction2 * sightRange), Color.red);
+        //Debug.DrawRay(transform.position, transform.TransformDirection(direction3 * sightRange), Color.red);
     }
 
 }
-
