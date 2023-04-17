@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2322408}
   - component: {fileID: 13546088}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: SuperPac
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
