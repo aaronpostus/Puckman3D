@@ -1,61 +1,122 @@
 fileFormatVersion: 2
 guid: 1715985f1ff8a9e45b60ea3ed8b6385c
-timeCreated: 1480123582
-licenseType: Free
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: BE_Bottom
-    100002: BE_TOP
-    100004: BN_Bottom
-    100006: BN_TOP
-    100008: CTRL_Bottom
-    100010: CTRL_main
-    100012: CTRL_TOP
-    100014: IK Bottom
-    100016: IK Top
-    100018: PAC-MAN
-    100020: //RootNode
-    400000: BE_Bottom
-    400002: BE_TOP
-    400004: BN_Bottom
-    400006: BN_TOP
-    400008: CTRL_Bottom
-    400010: CTRL_main
-    400012: CTRL_TOP
-    400014: IK Bottom
-    400016: IK Top
-    400018: PAC-MAN
-    400020: //RootNode
-    4300000: PAC-MAN
-    7400000: Idle
-    7400002: NomNom
-    9500000: //RootNode
-    13700000: PAC-MAN
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: BE_Bottom
+  - first:
+      1: 100002
+    second: BE_TOP
+  - first:
+      1: 100004
+    second: BN_Bottom
+  - first:
+      1: 100006
+    second: BN_TOP
+  - first:
+      1: 100008
+    second: CTRL_Bottom
+  - first:
+      1: 100010
+    second: CTRL_main
+  - first:
+      1: 100012
+    second: CTRL_TOP
+  - first:
+      1: 100014
+    second: IK Bottom
+  - first:
+      1: 100016
+    second: IK Top
+  - first:
+      1: 100018
+    second: PAC-MAN
+  - first:
+      1: 100020
+    second: //RootNode
+  - first:
+      4: 400000
+    second: BE_Bottom
+  - first:
+      4: 400002
+    second: BE_TOP
+  - first:
+      4: 400004
+    second: BN_Bottom
+  - first:
+      4: 400006
+    second: BN_TOP
+  - first:
+      4: 400008
+    second: CTRL_Bottom
+  - first:
+      4: 400010
+    second: CTRL_main
+  - first:
+      4: 400012
+    second: CTRL_TOP
+  - first:
+      4: 400014
+    second: IK Bottom
+  - first:
+      4: 400016
+    second: IK Top
+  - first:
+      4: 400018
+    second: PAC-MAN
+  - first:
+      4: 400020
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: PAC-MAN
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: NomNom
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: PAC-MAN
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: NomNom
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 25
       wrapMode: 0
@@ -109,25 +170,47 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -137,11 +220,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
