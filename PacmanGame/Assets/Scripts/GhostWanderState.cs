@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal.VR;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PredatorWanderState : IGhostState
 {
@@ -11,7 +12,7 @@ public class PredatorWanderState : IGhostState
     private float redirectDegree = 0f;
     private int speed = 6;
 
-    public IGhostState DoState(Ghost ghost, Vector3 direction)
+    public IGhostState DoState(Ghost ghost, Vector3 direction, NavMeshAgent agent, Vector3 destination)
     {
         Wander(ghost);
         return ghost.wanderState;
@@ -31,4 +32,3 @@ public class PredatorWanderState : IGhostState
         }
     }
 }
-
