@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>9.0</LangVersion>
@@ -56,20 +56,25 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Pellet.cs" />
     <Compile Include="Assets\Scripts\TitleScreen\HoverAnimation.cs" />
+    <Compile Include="Assets\Scripts\MovementControl.cs" />
     <Compile Include="Assets\Scripts\TitleScreen\PacmanAnimation.cs" />
     <Compile Include="Assets\Scripts\TitleScreen\MouseInput.cs" />
-    <Compile Include="Assets\Scripts\GhostChaseState.cs" />
-    <Compile Include="Assets\Scripts\TitleScreen\TitleScreenInput.cs" />
-    <Compile Include="Assets\Scripts\GhostFleeState.cs" />
-    <Compile Include="Assets\Scripts\GhostWanderState.cs" />
-    <Compile Include="Assets\Scripts\Ghost.cs" />
-    <Compile Include="Assets\Scripts\IGhostState.cs" />
-    <Compile Include="Assets\Scripts\TitleScreen\BerrySpin.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\Scripts\Ghost\GhostChaseState.cs" />
+    <Compile Include="Assets\Scripts\QuitHandler.cs" />
+    <Compile Include="Assets\Scripts\TitleScreen\TitleScreenInput.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\PacmanInputs.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\Scripts\Ghost\GhostFleeState.cs" />
+    <Compile Include="Assets\Scripts\Ghost\GhostWanderState.cs" />
+    <Compile Include="Assets\Scripts\Ghost\Ghost.cs" />
+    <Compile Include="Assets\Scripts\Ghost\IGhostState.cs" />
+    <Compile Include="Assets\Scripts\TitleScreen\BerrySpin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
