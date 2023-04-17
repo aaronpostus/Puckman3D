@@ -60,6 +60,7 @@
     <Compile Include="Assets/Scripts/QuitHandler.cs" />
     <Compile Include="Assets/PacmanInputs.cs" />
     <Compile Include="Assets/Scripts/InputManager.cs" />
+    <Compile Include="Assets/Scripts/EventManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
