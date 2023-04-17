@@ -37,13 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\TitleScreen\HoverAnimation.cs" />
+     <Compile Include="Assets\Scripts\TitleScreen\PacmanAnimation.cs" />
+     <Compile Include="Assets\Scripts\TitleScreen\MouseInput.cs" />
      <Compile Include="Assets\Scripts\GhostChaseState.cs" />
+     <Compile Include="Assets\Scripts\TitleScreen\TitleScreenInput.cs" />
      <Compile Include="Assets\Scripts\GhostFleeState.cs" />
      <Compile Include="Assets\Scripts\GhostWanderState.cs" />
      <Compile Include="Assets\Scripts\Ghost.cs" />
      <Compile Include="Assets\Scripts\IGhostState.cs" />
      <Compile Include="Assets\Scripts\TitleScreen\BerrySpin.cs" />
-     <Compile Include="Assets\Scripts\TitleScreen\PacmanAnimation.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

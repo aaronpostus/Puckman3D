@@ -7258,6 +7258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 119288, guid: b940871214ccf2647ad1cbd645bac070, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 124332, guid: b940871214ccf2647ad1cbd645bac070, type: 3}
       propertyPath: m_Name
       value: Clyde
