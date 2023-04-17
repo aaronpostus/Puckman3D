@@ -19,6 +19,7 @@ obj/
 *.unityproj
 *.booproj
 *.log
+*.vsidx
 
 # ============ #
 # OS generated #
