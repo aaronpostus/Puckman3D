@@ -13,7 +13,7 @@ namespace OttiPostLewis.Lab6
         private Vector3 direction;
         private int speed = 5; //speed should be less than pacman's
         private float timer = 0;
-        [SerializeField] float fleeTime = 6;
+        [SerializeField] float fleeTime = 6; //equal to pacman's eating state duration
 
         public IGhostState DoState(Ghost ghost, Vector3 direction, NavMeshAgent agent, Vector3 destination)
         {
@@ -33,8 +33,6 @@ namespace OttiPostLewis.Lab6
         {
             //enable ghost flee objects and disable others
             //use navMesh to move as far from pacman's position as possible
-            //ghost.transform.rotation = Quaternion.LookRotation(direction);
-            //ghost.transform.localPosition += ghost.transform.forward * Time.deltaTime * speed;
         }
 
         //goal is to enable whatever is disabled and vice versa

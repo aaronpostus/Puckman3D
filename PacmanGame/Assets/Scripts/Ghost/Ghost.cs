@@ -16,77 +16,71 @@ namespace OttiPostLewis.Lab6
 
         private IGhostState currentState;
         private float sightRange = 9f; //sight range will be as long as level's length/width but should not see through walls
-        private List<Ray> sightRays = new List<Ray>();
         private Vector3 currentDirection;
-        private Vector3 initialPosition;
-        private Vector3 direction1;
+        private Vector3 forward;
         private Vector3 destination;
+        private Ray sight;
+
+        private Vector3 initialPosition;
+        //private List<Ray> sightRays = new List<Ray>();
         //private Vector3 direction2;
         //private Vector3 direction3;
 
         private void OnEnable()
         {
             currentDirection = transform.forward;
-            currentState = chaseState;
+            forward = Vector3.forward;
+            currentState = wanderState;
             initialPosition = transform.position;
-            SetDirections();
-        }
-
-        private void SetDirections()
-        {
-            //3 sight rays (forward, left, right) ? 1?
-            direction1 = Vector3.forward;
-            //direction2 = Vector3.left;
-            //direction3 = Vector3.right;
-
         }
 
         void Update()
         {
             currentState = currentState.DoState(this, currentDirection, agent, destination);
             UpdateSight();
-            DrawRays();
+            DrawRay();
             CheckForPacman();
 
-            //locking x and z rotations, locking y position
-            transform.position = new Vector3(transform.position.x, initialPosition.y, transform.position.z);
-            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            //locking x and z rotations, locking y position ???
+            //transform.position = new Vector3(transform.position.x, initialPosition.y, transform.position.z);
+            //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
 
         private void UpdateSight()
-        {
-            sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction1 * sightRange)));
+        {         
+            sight = new Ray(transform.position, transform.TransformDirection(forward * sightRange));
+
+            //sightRays.Add(new Ray(transform.position, transform.TransformDirection(forward * sightRange)));
             //sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction2 * sightRange)));
             //sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction3 * sightRange)));
         }
 
         private void CheckForPacman()
         {
-            //Note: "Player" = pacman
+            //Note: "Player" tag = pacman
 
-            for (int i = 0; i < sightRays.Count; i++)
+            //if pacman's current state == big pacman
+                //currentState = fleeState;
+            
+            //else if
+            if (Physics.Raycast(sight, out RaycastHit hit, sightRange))
             {
-                if (Physics.Raycast(sightRays[i], out RaycastHit hit, sightRange))
+                Debug.Log("ghost sees something");
+                if (hit.collider.CompareTag("Player"))
                 {
-                    if (hit.collider.CompareTag("Player"))
-                    {
-                        Debug.Log("Ghost sees pacman");
-                        //set destination to pacman's current location, pass in as argument
-                        currentDirection = sightRays[i].direction;
-                        destination = hit.transform.position;
-                        //should enter this state when sees pacman and go to last known location pacman was in
-                        currentState = chaseState;
-                        break;
-                    }
+                    Debug.Log("Ghost sees pacman");
+                    //set destination to pacman's current location
+                    destination = hit.transform.position;
+                    currentState = chaseState;
                 }
             }
-            sightRays.Clear();
+
         }
 
         //for debugging purposes
-        private void DrawRays()
+        private void DrawRay()
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(direction1 * sightRange), Color.red);
+            Debug.DrawRay(transform.position, transform.TransformDirection(forward * sightRange), Color.red);
             //Debug.DrawRay(transform.position, transform.TransformDirection(direction2 * sightRange), Color.red);
             //Debug.DrawRay(transform.position, transform.TransformDirection(direction3 * sightRange), Color.red);
         }
