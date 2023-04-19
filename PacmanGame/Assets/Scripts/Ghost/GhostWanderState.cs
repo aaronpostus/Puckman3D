@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditorInternal.VR;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.UI.GridLayoutGroup;
 
 namespace OttiPostLewis.Lab6
 {
@@ -14,7 +15,7 @@ namespace OttiPostLewis.Lab6
         private Vector3 destination;
         private bool computeInitialDest = true;
         private float positionThreshold = 0.01f;
-        private float range = 20f;
+        private float range = 100f;
         private Vector3[] pathCorners;
         private float targetAngle;
 
@@ -28,7 +29,7 @@ namespace OttiPostLewis.Lab6
             //this.direction = direction;
             this.ghost = ghost;
             this.agent = agent;
-            //agent.updateRotation = false;
+            agent.updateRotation = false;
 
             //this.destination = destination;
 
@@ -42,7 +43,7 @@ namespace OttiPostLewis.Lab6
             //goal: should never turn 180 degrees, should not move diagonally
 
             Debug.Log("ghost wandering");
-            
+
 
             if ((Mathf.Abs(ghost.transform.position.x - destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - destination.z) < positionThreshold) || computeInitialDest)
             {
@@ -51,49 +52,120 @@ namespace OttiPostLewis.Lab6
                 NavMesh.SamplePosition(randomPoint, out NavMeshHit hit, range, NavMesh.AllAreas);
                 destination = hit.position;
                 //Debug.Log("dest: " + destination);
+                //agent.SetDestination(destination);
+
+                NavMeshPath path1 = agent.path;
+                pathCorners = path1.corners;
+                //Debug.Log("length: " + pathCorners.Length);
+                //Debug.Log("has path? " + agent.hasPath);
+                //Debug.Log("pending? " + agent.pathPending);
+
+
+                //if (Mathf.Abs(ghost.transform.position.x - hit.position.x) > Mathf.Abs(ghost.transform.position.z - hit.position.z))
+                //{
+                //    destination = new Vector3(hit.position.x, ghost.transform.position.y, ghost.transform.position.z);
+                //}
+                //// otherwise modify the destination point to only move along the z axis
+                //else
+                //{
+                //    destination = new Vector3(ghost.transform.position.x, ghost.transform.position.y, hit.position.z);
+                //}
+
                 agent.SetDestination(destination);
 
-                NavMeshPath path = agent.path;
-                pathCorners = path.corners;
+                //for (int i = 0; i < pathCorners.Length - 1; i++)
+                //{
+                //    Debug.DrawLine(pathCorners[i], pathCorners[i + 1], Color.green);
+                //    Debug.Log("wtf");
+                //}
 
             }
             computeInitialDest = false;
 
-            /*
+            NavMeshPath path = agent.path;
+            pathCorners = path.corners;
+            Debug.Log("has path? " + agent.hasPath);
+            Debug.Log("pending? " + agent.pathPending);
+
+            //for (int i = 0; i < pathCorners.Length - 1; i++)
+            //{
+            //    Debug.DrawLine(pathCorners[i], pathCorners[i + 1], Color.green);
+            //    Debug.Log("wtf");
+            //}
+
             //loop through the path and compare each path corner to the agents current position
             for (int i = 0; i < pathCorners.Length; i++)
             {
+                Debug.Log("has path2? " + agent.hasPath);
+                Debug.Log("pending2? " + agent.pathPending);
                 //if agent has reached next point
                 if (Mathf.Abs(ghost.transform.position.x - pathCorners[i].x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - pathCorners[i].z) < positionThreshold)
                 {
-                    Debug.Log("here1");
+                    Debug.Log("agent has reached next point");
                     //check which direction it should turn for the next point in the path (so it is at pathCorner i now)
-                    if (i+1 < pathCorners.Length)
+                    if (i + 1 < pathCorners.Length)
                     {
-                        Debug.Log("here2");
+                        Debug.DrawLine(pathCorners[i], pathCorners[i + 1], Color.green);
+                        Debug.Log("there is a corner after this");
                         //if the difference in x position is greater than the difference in z position
-                        if (Mathf.Abs(pathCorners[i].x - pathCorners[i + 1].x) > Mathf.Abs(pathCorners[i].z - pathCorners[i + 1].z))
-                        {
+                        //if (Mathf.Abs(pathCorners[i].x - pathCorners[i + 1].x) > Mathf.Abs(pathCorners[i].z - pathCorners[i + 1].z))
+                        //{
                             //turn on x axis
-                            Debug.Log("turning on x");
-                            targetAngle = Mathf.Sign(pathCorners[i + 1].x - pathCorners[i].x) * 90f;
-                            ghost.transform.rotation = Quaternion.LookRotation(new Vector3(targetAngle, 0f, 0f));
-                        }
-                        else
+                            Debug.Log("rotate");
+                            
+
+                            //targetAngle = Mathf.Sign(pathCorners[i + 1].x - pathCorners[i].x) * 90f;
+                            //ghost.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+
+                            // Get the direction to the next waypoint
+                            Vector3 direction = pathCorners[i + 1] - pathCorners[i];
+
+                            if (direction.z > 0)
+                            {
+                                ghost.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                            }
+                            else if (direction.x > 0)
+                            {
+                                ghost.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+                            }
+                            else if (direction.x < 0)
+                            {
+                                ghost.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+                            }
+                            else if (direction.z < 0)
                         {
+                                ghost.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                            }
+
+                            //// Calculate the rotation needed to look in that direction
+                            //Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+                            //// Apply the rotation to the agent's transform
+                            //ghost.transform.rotation = targetRotation;
+                        //}
+                        //else
+                        //{
                             //turn on z axis
-                            Debug.Log("turning on z");
-                            targetAngle = Mathf.Sign(pathCorners[i + 1].z - pathCorners[i].z) * 90f;
-                            ghost.transform.rotation = Quaternion.LookRotation(new Vector3(0f, 0f, targetAngle));
-                        }
+                            //Debug.Log("turning on z");
+                            ////targetAngle = Mathf.Sign(pathCorners[i + 1].z - pathCorners[i].z) * 90f;
+                            ////ghost.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+
+                            //// Get the direction to the next waypoint
+                            //Vector3 direction = pathCorners[i + 1] - ghost.transform.position;
+
+                            //// Calculate the rotation needed to look in that direction
+                            //Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+                            //// Apply the rotation to the agent's transform
+                            //ghost.transform.rotation = targetRotation;
+                       // }
                     }
-                    
-                    
+
+
                 }
             }
-            */
-
         }
+
     }
 }
 
