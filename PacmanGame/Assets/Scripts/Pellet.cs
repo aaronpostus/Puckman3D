@@ -9,7 +9,7 @@ namespace OttiPostLewis.Lab6
 
         public GameManager gameManager;
 
-        // Use this for initialization
+   
         void Start()
         {
             gameManager = GameObject.FindObjectOfType<GameManager>();
