@@ -98,3 +98,15 @@ namespace OttiPostLewis.Lab6
 
     }
 }
+
+
+//TODO:
+
+//complete states:
+//exitHome: stagger ghosts
+//wander: fix manual rotations
+//all: add manual rotations
+
+//sound manager
+
+//add ghosts and navmeshes to all levels

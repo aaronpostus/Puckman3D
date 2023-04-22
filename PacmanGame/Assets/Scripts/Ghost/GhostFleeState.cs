@@ -84,11 +84,12 @@ namespace OttiPostLewis.Lab6
 
     //TODO:
 
-    //leave home state: after x seconds passes, set destination to outside of the home (which is where?), then set state to wander state
-
-    //test isolated rotation
-
-    //complete states
+    //complete states:
+        //exitHome: stagger ghosts
+        //wander: fix manual rotations
+        //all: add manual rotations
 
     //sound manager
+
+    //add ghosts and navmeshes to all levels
 
