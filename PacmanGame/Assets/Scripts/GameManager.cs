@@ -28,7 +28,6 @@ namespace OttiPostLewis.Lab6
         private void Start()
         {
 
-            // Initialize the coin count to 0
             playerScore = 0;
             scoreText.text = "Score: " + playerScore;
             remainingLives = 4;
@@ -46,7 +45,7 @@ namespace OttiPostLewis.Lab6
 
         }
 
-        // This method will be called whenever a coin is picked up by the player
+        
         public void ConsumePellet(GameObject gameObject)
         {
             playerScore += 10;
@@ -55,14 +54,15 @@ namespace OttiPostLewis.Lab6
         }
 
 
-        // This method will be called whenever a coin is picked up by the player
+        // This method will be called whenever a power pellet is consumed
         public void ConsumePowerPellet()
         {
             playerScore += 10;
+            //Chase Ghosts
 
         }
 
-
+        //  This method will be called whenever pacman consumes a ghost. 
         public void ConsumeGhost()
         {
             playerScore += (200 * ghostMultiplier);
@@ -70,31 +70,62 @@ namespace OttiPostLewis.Lab6
 
         }
 
-        //Method to change scene when the game is over
-        public void GameOver()
+       
+
+        //  Method to advance when the player beats the level
+        public void LevelWon()
         {
 
-           
+           //Load the scene for the new level
+
 
         }
 
-
+        //  Method called when the player dies
         public void OnPlayerDeath()
         {
             if (remainingLives > 0)
             {
-                remainingLives--;
-                playerScore = 0;
+                ResetLevel();
+             
+                
+            }
+            else
+            {
+                GameOver();
             }
 
 
         }
 
-     
+
+        //  Method to reset the level
+        public void ResetLevel()
+        {
+            remainingLives--;
+            playerScore = 0;
+
+
+        }
+
+
+        //  Method to change scene when the game is over
+        public void GameOver()
+        {
+
+            //Change the scene
+
+        }
+
+
 
         public void Update()
         {
-            scoreText.text = "Coins: " + playerScore;
+            if (pellets.Count == 0)
+            {
+                LevelWon();
+            }
+            //Update UI Elements
         }
     }
 }
