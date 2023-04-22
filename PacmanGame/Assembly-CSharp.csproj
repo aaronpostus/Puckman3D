@@ -75,6 +75,9 @@
     <Compile Include="Assets\Scripts\Ghost\Ghost.cs" />
     <Compile Include="Assets\Scripts\Ghost\IGhostState.cs" />
     <Compile Include="Assets\Scripts\TitleScreen\BerrySpin.cs" />
+    <Compile Include="Assets\Scripts\Ghost\GhostReturnHomeState.cs" />
+    <Compile Include="Assets\Scripts\Ghost\GhostExitHomeState.cs" />
+    <Compile Include="Assets\Scripts\Ghost\RotateTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -11,35 +11,84 @@ namespace OttiPostLewis.Lab6
     {
 
         private Vector3 direction;
-        private int speed = 5; //speed should be less than pacman's
+        private int speed = 3; //speed should be less than pacman's
         private float timer = 0;
-        [SerializeField] float fleeTime = 6; //equal to pacman's eating state duration
+        private NavMeshAgent agent;
+        private Ghost ghost;
+        private Vector3 destination;
+        private bool computeDestination = true;
+        private float range = 100f; //temporary
+        private Vector3 pacmanPosition = Vector3.zero; //temporary until pacman's location is public/a property
+        private float fleeTime = 6; //equal to pacman's eating state duration
 
         public IGhostState DoState(Ghost ghost, Vector3 direction, NavMeshAgent agent, Vector3 destination)
         {
             this.direction = direction;
-            Flee(ghost);
-            timer += Time.deltaTime;
+            this.ghost = ghost;
+            this.destination = destination;
+            this.agent = agent;
+            agent.speed = this.speed;
+            Flee();
 
+            timer += Time.deltaTime;
             if (timer > fleeTime)
             {
                 timer = 0;
+                computeDestination = true;
                 return ghost.wanderState;
             }
             return ghost.fleeState;
         }
 
-        private void Flee(Ghost ghost)
+        private void Flee()
         {
-            //enable ghost flee objects and disable others
-            //use navMesh to move as far from pacman's position as possible
+            //change to flee animation
+            ChangeAnimation();
+
+            //only set destination once
+            if (computeDestination)
+            {
+                //use navMesh to move as far from pacman's position as possible
+                float farthestDistance = 0f;
+                for (int i = 0; i < 10; i++)
+                {
+                    Vector3 randomPoint = ghost.transform.position + Random.insideUnitSphere * range;
+                    NavMesh.SamplePosition(randomPoint, out NavMeshHit hit, range, NavMesh.AllAreas);
+                    float distance = Vector3.Distance(hit.position, pacmanPosition);
+                    if (distance > farthestDistance)
+                    {
+                        farthestDistance = distance;
+                        destination = hit.position;
+                    }
+                }
+                Debug.Log("setting destination");
+                agent.SetDestination(destination);
+                computeDestination = false;
+
+                //choose another destination once it reaches current destination ???
+            }
+
+
+            //do angle stuff
+
         }
 
-        //goal is to enable whatever is disabled and vice versa
         private void ChangeAnimation()
         {
-
+            ghost.transform.GetChild(0).gameObject.SetActive(false);
+            ghost.transform.GetChild(1).gameObject.SetActive(true);
         }
 
     }
 }
+
+    //TODO:
+
+    //leave home state: after x seconds passes, set destination to outside of the home (which is where?), then set state to wander state
+
+    //test isolated rotation
+
+    //complete states
+
+    //sound manager
+

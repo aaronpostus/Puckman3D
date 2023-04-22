@@ -117,8 +117,7 @@ namespace OttiPostLewis.Lab6
                             //targetAngle = Mathf.Sign(pathCorners[i + 1].x - pathCorners[i].x) * 90f;
                             //ghost.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-                            // Get the direction to the next waypoint
-                            Vector3 direction = pathCorners[i + 1] - pathCorners[i];
+                            Vector3 direction = pathCorners[i + 1] - pathCorners[i]; //may not account for local direction??
 
                             if (direction.z > 0)
                             {
@@ -133,7 +132,7 @@ namespace OttiPostLewis.Lab6
                                 ghost.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
                             }
                             else if (direction.z < 0)
-                        {
+                            {
                                 ghost.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                             }
 

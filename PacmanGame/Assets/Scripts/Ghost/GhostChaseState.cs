@@ -32,11 +32,10 @@ namespace OttiPostLewis.Lab6
 
         private void Chase()
         {
-            Debug.Log("ghost chasing");
-            //agent.SetDestination(new Vector3(-3.5f, ghost.transform.position.y, -1.97f));
-            //Debug.Log(agent.isOnNavMesh);
-
             agent.SetDestination(new Vector3(destination.x, ghost.transform.position.y, destination.z)); 
+
+            //do angle stuff
+
         }
 
     }

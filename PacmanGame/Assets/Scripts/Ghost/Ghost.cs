@@ -11,6 +11,8 @@ namespace OttiPostLewis.Lab6
         public GhostWanderState wanderState = new GhostWanderState();
         public GhostChaseState chaseState = new GhostChaseState();
         public GhostFleeState fleeState = new GhostFleeState();
+        public GhostReturnHomeState returnHomeState = new GhostReturnHomeState();
+        public GhostExitHomeState exitHomeState = new GhostExitHomeState();
 
         [SerializeField] private NavMeshAgent agent;
 
@@ -30,7 +32,7 @@ namespace OttiPostLewis.Lab6
         {
             currentDirection = transform.forward;
             forward = Vector3.forward;
-            currentState = wanderState;
+            currentState = exitHomeState;
             initialPosition = transform.position;
         }
 
@@ -44,6 +46,15 @@ namespace OttiPostLewis.Lab6
             //locking x and z rotations, locking y position ???
             //transform.position = new Vector3(transform.position.x, initialPosition.y, transform.position.z);
             //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            //if in flee state and collides with pacman, return home
+            if (currentState == fleeState && other.gameObject.CompareTag("Player"))
+            {
+                currentState = returnHomeState;
+            }
         }
 
         private void UpdateSight()
