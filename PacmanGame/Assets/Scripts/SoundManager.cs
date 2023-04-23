@@ -6,14 +6,23 @@ namespace OttiPostLewis.Lab6
 {
     public class SoundManager : MonoBehaviour
     {
-        [SerializeField] private AudioClip pacmanEating;
-        private AudioSource audioSource;
         private Dictionary<string, AudioClip> sounds = new Dictionary<string, AudioClip>();
+        private AudioSource bgMusicSource, fxSource;
+        [SerializeField] private AudioClip pacmanEating;
+        [SerializeField] private AudioClip backGroundMusic;
+        private bool bgMusicIsPlaying = false;
 
         void Start()
         {
-            audioSource = GetComponent<AudioSource>();
+            bgMusicSource = gameObject.AddComponent<AudioSource>();
+            fxSource = gameObject.AddComponent<AudioSource>();
+
+            bgMusicSource.volume = 0.4f;
+            bgMusicSource.loop = true;
+            bgMusicSource.clip = backGroundMusic;
+
             sounds.Add("Eat", pacmanEating);
+            BackgroundMusic();
         }
 
         public void PlaySound(string soundID)
@@ -21,9 +30,28 @@ namespace OttiPostLewis.Lab6
             AudioClip currentSound;
             if (sounds.TryGetValue(soundID, out currentSound))
             {
-                audioSource.clip = currentSound;
-                audioSource.Play();
+                fxSource.clip = currentSound;
+                fxSource.Play();
             }
+        }
+
+
+
+        public void BackgroundMusic()
+        {
+            
+            if (bgMusicIsPlaying)
+            {
+                bgMusicSource.Stop();
+            }
+            else
+            {
+                bgMusicSource.Play();
+            }
+
+            bgMusicIsPlaying = !bgMusicIsPlaying;
+
+
         }
 
     }
