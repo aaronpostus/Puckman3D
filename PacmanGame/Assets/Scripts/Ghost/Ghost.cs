@@ -13,6 +13,7 @@ namespace OttiPostLewis.Lab6
         public GhostFleeState fleeState = new GhostFleeState();
         public GhostReturnHomeState returnHomeState = new GhostReturnHomeState();
         public GhostExitHomeState exitHomeState = new GhostExitHomeState();
+        public static bool canMove = false;
 
         [SerializeField] private NavMeshAgent agent;
 
@@ -32,10 +33,13 @@ namespace OttiPostLewis.Lab6
 
         void Update()
         {
-            currentState = currentState.DoState(this, agent, destination);
-            UpdateSight();
-            DrawRay();
-            CheckForPacman();
+            if (canMove)
+            {
+                currentState = currentState.DoState(this, agent, destination);
+                UpdateSight();
+                DrawRay();
+                CheckForPacman();
+            }
         }
 
         private void OnTriggerEnter(Collider other)
