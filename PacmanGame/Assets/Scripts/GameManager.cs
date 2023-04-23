@@ -8,45 +8,60 @@ namespace OttiPostLewis.Lab6
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] private MovementControl movementController;
+        [SerializeField] GameObject UIPrefab;
         private PacmanInputs inputScheme;
 
         public List<GameObject> pellets;
-
-        public int playerScore;
-        public int remainingLives;
+        public List<string> levels;
+        public static int playerScore;
+        public static int remainingLives;
         private int ghostMultiplier;
-        public TextMeshProUGUI scoreText;
 
-        public static GameManager Instance { get; private set; }
-        private void Awake() 
-        {  
-            pellets = new List<GameObject>();
-            inputScheme = new PacmanInputs();
-            movementController.Initialize(inputScheme.Pacman.Movement);
-        
-            if (Instance != null && Instance != this) 
-            { 
-                Destroy(this); 
-            } 
-            else 
-            { 
-                Instance = this; 
-            } 
+        public enum CameraModes : int { Isometric = 0, TopDown = 1, Mixed = 2 };
+        public enum Gamemodes : int { Story = 0, Endless = 1 };
+        public enum Gamestate : int { Loading = 0, GamePlay = 1 };
+        public static int selectedCameraMode = (int) CameraModes.Isometric;
+        public static int selectedGameMode = (int) Gamemodes.Story;
+        public int currentGameState = (int) Gamestate.Loading;
+        // for story mode, this is the actual level we are on (LevelX scene)
+        // for infinite mode, this is the total number of levels we have completed
+        // (not indicative of the current scene)
+        public static int currentLevel = 0;
+
+        // singleton instance
+        private static GameManager instance = null;
+        public static GameManager Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new GameManager();
+                }
+                return instance;
+            }
         }
+        public GameManager() {
+            levels = new List<string>();
 
+            levels.Add("Level1Copy");
+            levels.Add("Level2");
+            levels.Add("Level2");
+            pellets = new List<GameObject>();
+            //inputScheme = new PacmanInputs();
+            //movementController.Initialize(inputScheme.Pacman.Movement);
+        }
         private void Start()
         {
 
             playerScore = 0;
-            scoreText.text = "Score: " + playerScore;
             remainingLives = 4;
 
         }
 
         private void OnEnable()
         {
-            var _ = new QuitHandler(inputScheme.Pacman.Quit);
+            //var _ = new QuitHandler(inputScheme.Pacman.Quit);
         }
 
         public void AddPellet(GameObject gameObject)
@@ -80,7 +95,27 @@ namespace OttiPostLewis.Lab6
 
         }
 
-       
+       public void StartNextLevel() {
+            currentLevel++;
+            if(selectedGameMode == (int) Gamemodes.Story) {
+                SceneManager.LoadScene(levels[currentLevel - 1], LoadSceneMode.Single);
+            }
+            else {
+                SceneManager.LoadScene(levels[Random.Range(0,levels.Count)]);
+            }
+            InitializeCurrentLevel();
+       }
+       private void InitializeCurrentLevel() {
+            Scene scene = SceneManager.GetSceneByName(levels[currentLevel-1]);
+            GameObject[] objectsInScene = scene.GetRootGameObjects();
+            foreach(GameObject gameObject in objectsInScene) {
+                if(gameObject.name.Equals("LevelUIPrefab")) {
+                    Debug.Log("Found");
+                }
+            }
+            //GameObject ui = GameObject.Find("LevelUIPrefab");
+            //ui.SetActive(false);
+       }
 
         //  Method to advance when the player beats the level
         public void LevelWon()
