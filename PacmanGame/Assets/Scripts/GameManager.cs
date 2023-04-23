@@ -9,6 +9,7 @@ namespace OttiPostLewis.Lab6
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private MovementControl movementController;
+        [SerializeField] private SoundManager soundManager;
         private PacmanInputs inputScheme;
 
         public List<GameObject> pellets;
@@ -60,7 +61,8 @@ namespace OttiPostLewis.Lab6
         {
             playerScore += 10;
             pellets.Remove(gameObject);
-           
+            soundManager.PlaySound("Eat");
+
         }
 
 
