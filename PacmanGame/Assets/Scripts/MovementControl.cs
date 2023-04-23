@@ -25,7 +25,7 @@ namespace OttiPostLewis.Lab6
         private void Start()
         {
             playerTransform = playerToMove.transform;
-            raySize = 0.6f;
+            raySize = 0.45f;
             targetRotation = Quaternion.identity;
             SetDirections();
             // Calculate direction vectors
@@ -62,7 +62,7 @@ namespace OttiPostLewis.Lab6
 
         private void Update()
         {
-            if (canMove) {
+            if (!canMove) {
 
                 LockMovement();
 
