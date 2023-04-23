@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.22f1 (b6c551784ba3) revision 11978065'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 15776 MB
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 16068 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2021.3.22f1\Editor\Unity.exe
 -name
 AssetImportWorker1
 -projectPath
-C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame
+C:/Users/maddi/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame/PacmanGame
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-58025
-Successfully changed project path to: C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame
-C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame
+52328
+Successfully changed project path to: C:/Users/maddi/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame/PacmanGame
+C:/Users/maddi/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame/PacmanGame
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,96 +47,96 @@ C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [30520] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 2529913511 [EditorId] 2529913511 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J1FR71LJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [64528] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2841176365 [EditorId] 2841176365 [Version] 1048832 [Id] WindowsEditor(7,Maddis-Device) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [30520] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 2529913511 [EditorId] 2529913511 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J1FR71LJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [64528] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 2841176365 [EditorId] 2841176365 [Version] 1048832 [Id] WindowsEditor(7,Maddis-Device) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 101.39 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 81.75 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.22f1 (b6c551784ba3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/rawkd/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame/Assets
+[Subsystems] Discovering subsystems at path C:/Users/maddi/OneDrive/Documents/GitHub/PacmanCSE3541Lab6/PacmanGame/PacmanGame/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3080 Laptop GPU (ID=0x249c)
-    Vendor:   NVIDIA
-    VRAM:     8042 MB
-    Driver:   30.0.15.1278
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x46a6)
+    Vendor:   Intel
+    VRAM:     8034 MB
+    Driver:   31.0.101.3301
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006163 seconds.
+Registered in 0.003015 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 91.23 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 85.59 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.589 seconds
+- Completed reload, in  0.518 seconds
 Domain Reload Profiling:
-	ReloadAssembly (589ms)
-		BeginReloadAssembly (85ms)
+	ReloadAssembly (519ms)
+		BeginReloadAssembly (66ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (414ms)
-			LoadAssemblies (83ms)
+		EndReloadAssembly (382ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (93ms)
+			SetupTypeCache (82ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (21ms)
-			SetupLoadedEditorAssemblies (255ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (235ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (91ms)
+				RefreshPlugins (86ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (118ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
+				ProcessInitializeOnLoadAttributes (105ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006558 seconds.
+Registered in 0.007331 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\rawkd\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\rawkd\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\maddi\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\maddi\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 101.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 82.57 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.236 seconds
+- Completed reload, in  1.057 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1236ms)
-		BeginReloadAssembly (97ms)
+	ReloadAssembly (1057ms)
+		BeginReloadAssembly (103ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (1048ms)
-			LoadAssemblies (80ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (877ms)
+			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (301ms)
+			SetupTypeCache (237ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (581ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (475ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (102ms)
-				BeforeProcessingInitializeOnLoad (104ms)
-				ProcessInitializeOnLoadAttributes (289ms)
-				ProcessInitializeOnLoadMethodAttributes (76ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				RefreshPlugins (83ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (239ms)
+				ProcessInitializeOnLoadMethodAttributes (56ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
@@ -144,12 +144,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 5221 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 37 unused Assets / (0.8 MB). Loaded Objects now: 5675.
-Memory consumption went from 211.4 MB to 210.6 MB.
-Total: 5.537300 ms (FindLiveObjects: 0.406700 ms CreateObjectMapping: 0.367300 ms MarkObjects: 4.389500 ms  DeleteObjects: 0.372500 ms)
+Unloading 35 unused Assets / (0.7 MB). Loaded Objects now: 5675.
+Memory consumption went from 212.2 MB to 211.5 MB.
+Total: 4.095400 ms (FindLiveObjects: 0.342800 ms CreateObjectMapping: 0.201200 ms MarkObjects: 3.176900 ms  DeleteObjects: 0.373000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -164,94 +164,196 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 115021.119954 seconds.
-  path: Assets/OctoMan/Prefabs/Sphere.prefab
-  artifactKey: Guid(4371bfa8db8d0b0439cd959df49b3361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Sphere.prefab using Guid(4371bfa8db8d0b0439cd959df49b3361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2270b03c7eb4563cd3aaf391377db148') in 0.210014 seconds 
+  Time since last request: 661066.904331 seconds.
+  path: Assets/PacmanInputs.inputactions
+  artifactKey: Guid(33dac06744d9f4a0e979a6fb4bd16e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PacmanInputs.inputactions using Guid(33dac06744d9f4a0e979a6fb4bd16e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8abf30c2bccef8c9bbc28b569d177f55') in 0.059598 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 31.833806 seconds.
-  path: Assets/OctoMan/Prefabs/Characters/Clyde.prefab
-  artifactKey: Guid(b940871214ccf2647ad1cbd645bac070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Characters/Clyde.prefab using Guid(b940871214ccf2647ad1cbd645bac070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '702df70dc4fca25b5c8f4456a0b47996') in 0.027542 seconds 
+  Time since last request: 0.000033 seconds.
+  path: Assets/Materials/GhostEyes.mat
+  artifactKey: Guid(d4033a8cf0096cb4e865f62ba3a89e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/GhostEyes.mat using Guid(d4033a8cf0096cb4e865f62ba3a89e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87831e89dbdb093e16d931b0dc690612') in 0.213719 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/OctoMan/Prefabs/Characters/Inky.prefab
-  artifactKey: Guid(870321c7c5c4b8f4a9958fdf4b651e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Characters/Inky.prefab using Guid(870321c7c5c4b8f4a9958fdf4b651e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a36a9994621a8a7453abfa7150c260d2') in 0.021115 seconds 
+  Time since last request: 0.000033 seconds.
+  path: Assets/Materials/OutsideWalls.mat
+  artifactKey: Guid(d1f6d1884158ba6418bf272768336785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/OutsideWalls.mat using Guid(d1f6d1884158ba6418bf272768336785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1519a5c507c98362ff871579ada38057') in 0.023801 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.307098 seconds.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Materials/GhostHouseMaterial.mat
+  artifactKey: Guid(9bc8ad729f136ab4ba297c07d8f15760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/GhostHouseMaterial.mat using Guid(9bc8ad729f136ab4ba297c07d8f15760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2c4eff1ff4ed650fe1b62d03a96024') in 0.020509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.417594 seconds.
+  path: Assets/OctoMan/3D Models/Clyde.FBX
+  artifactKey: Guid(ad0d253b2e4b904499f8e7aaeca65d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OctoMan/3D Models/Clyde.FBX using Guid(ad0d253b2e4b904499f8e7aaeca65d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e4ae8505ca9cf7b9f7e481d7498a87f') in 0.085310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/OctoMan/3D Models/Strawberry.FBX
+  artifactKey: Guid(e54b9e2dac2f1cd419496b8b84e386f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OctoMan/3D Models/Strawberry.FBX using Guid(e54b9e2dac2f1cd419496b8b84e386f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1ed71177404bd3410ec069340028951') in 0.150864 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005380 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\maddi\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\maddi\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.081 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1082ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (868ms)
+			LoadAssemblies (108ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (347ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (324ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (53ms)
+				ProcessInitializeOnLoadAttributes (209ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5085 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (0.7 MB). Loaded Objects now: 5762.
+Memory consumption went from 210.9 MB to 210.2 MB.
+Total: 3.534200 ms (FindLiveObjects: 0.311400 ms CreateObjectMapping: 0.168000 ms MarkObjects: 2.806000 ms  DeleteObjects: 0.247700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006454 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\maddi\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\maddi\OneDrive\Documents\GitHub\PacmanCSE3541Lab6\PacmanGame\PacmanGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.059 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1059ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (859ms)
+			LoadAssemblies (85ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (330ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (309ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (192ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5094 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (0.7 MB). Loaded Objects now: 5773.
+Memory consumption went from 211.2 MB to 210.5 MB.
+Total: 3.789000 ms (FindLiveObjects: 0.443300 ms CreateObjectMapping: 0.206500 ms MarkObjects: 2.774700 ms  DeleteObjects: 0.363000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 608.722591 seconds.
   path: Assets/OctoMan/Prefabs/Lootables/Strawberry.prefab
   artifactKey: Guid(8e89280ea57aa0c4c9b62c67572f0408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Lootables/Strawberry.prefab using Guid(8e89280ea57aa0c4c9b62c67572f0408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391744a1479a209ae5e7b5f7c6c7360f') in 0.013840 seconds 
+Start importing Assets/OctoMan/Prefabs/Lootables/Strawberry.prefab using Guid(8e89280ea57aa0c4c9b62c67572f0408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80dc656504f5e918775c7891665a3756') in 0.165642 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 23.730227 seconds.
-  path: Assets/OctoMan/3D Models/Materials/Yellow.mat
-  artifactKey: Guid(150d6591aac62674b8fcaa941159a410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/3D Models/Materials/Yellow.mat using Guid(150d6591aac62674b8fcaa941159a410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a06fd7b294ae55e4ddd64352982707de') in 0.022703 seconds 
+  Time since last request: 1.201853 seconds.
+  path: Assets/OctoMan/Prefabs/WallPieces/Wall02.prefab
+  artifactKey: Guid(2e8dff086d13d9943967933eda3a4ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OctoMan/Prefabs/WallPieces/Wall02.prefab using Guid(2e8dff086d13d9943967933eda3a4ac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '858f5468d48146ae84c19951a0980ae3') in 0.022686 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.215446 seconds.
-  path: Assets/OctoMan/Prefabs/Walls/L Piece 2.prefab
-  artifactKey: Guid(754321a94e22eb947b8a0a3dd391045d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Walls/L Piece 2.prefab using Guid(754321a94e22eb947b8a0a3dd391045d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e72311b4cad8d61bc755acbc9cc2a09') in 0.012765 seconds 
+  Time since last request: 0.000061 seconds.
+  path: Assets/OctoMan/Prefabs/WallPieces/Wall04.prefab
+  artifactKey: Guid(fcb27242292ff2040a2774c350800b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OctoMan/Prefabs/WallPieces/Wall04.prefab using Guid(fcb27242292ff2040a2774c350800b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '213057307b52fbee0d71ba4e9243f5f1') in 0.040952 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000812 seconds.
-  path: Assets/OctoMan/Prefabs/Walls/Long Piece 4.prefab
-  artifactKey: Guid(c7de5e7fa5c5a404485453dd4617b36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Walls/Long Piece 4.prefab using Guid(c7de5e7fa5c5a404485453dd4617b36a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '957b84cbd7f7479c25f367e2d0231857') in 0.015185 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/OctoMan/Prefabs/Walls/T Piece 1.prefab
-  artifactKey: Guid(2dcea80a90f545149aa9afee9a773d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Walls/T Piece 1.prefab using Guid(2dcea80a90f545149aa9afee9a773d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875b2ebc9f6228f2de3cf54f3a4a5ec5') in 0.014046 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/OctoMan/Prefabs/Walls/O Piece 1.prefab
-  artifactKey: Guid(43cd1d514d698944fbeda5faa2d26097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Walls/O Piece 1.prefab using Guid(43cd1d514d698944fbeda5faa2d26097) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf9c19141151964cd5d6ab92f557eebd') in 0.014069 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/OctoMan/Prefabs/Walls/O Piece 2.prefab
-  artifactKey: Guid(aa8a891306d31fd4dbd693042ceaba3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/Walls/O Piece 2.prefab using Guid(aa8a891306d31fd4dbd693042ceaba3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7697410b118f21e29d11de2873215fc') in 0.012201 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 32.087168 seconds.
-  path: Assets/OctoMan/Prefabs/WallPieces/Wall03.prefab
-  artifactKey: Guid(e84bae089341bb043af6a378ddbf5bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/WallPieces/Wall03.prefab using Guid(e84bae089341bb043af6a378ddbf5bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ff61a064f8f7234c3efb8d9a5cf8d7') in 0.012742 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/OctoMan/Prefabs/WallPieces/Wall07.prefab
-  artifactKey: Guid(52e95769d712955468fe1b4f9a5013ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/WallPieces/Wall07.prefab using Guid(52e95769d712955468fe1b4f9a5013ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a8e1e832ab073c9643f464f9ae83b1e') in 0.033539 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
+  Time since last request: 0.000049 seconds.
   path: Assets/OctoMan/Prefabs/WallPieces/Wall05.prefab
   artifactKey: Guid(13268889fec80e34c89894c802182027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/WallPieces/Wall05.prefab using Guid(13268889fec80e34c89894c802182027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9c92f4496c34e04757f77ff107a2600') in 0.014241 seconds 
+Start importing Assets/OctoMan/Prefabs/WallPieces/Wall05.prefab using Guid(13268889fec80e34c89894c802182027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '898b2851e35d4decfe48eed6e1ea340d') in 0.032376 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/OctoMan/Prefabs/WallPieces/Wall10.prefab
-  artifactKey: Guid(b1f7511164bfd024a8576ac1f6c4ab6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/WallPieces/Wall10.prefab using Guid(b1f7511164bfd024a8576ac1f6c4ab6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcf7de79241533551f4351a961864229') in 0.026186 seconds 
+  Time since last request: 0.000060 seconds.
+  path: Assets/OctoMan/Prefabs/WallPieces/Wall06.prefab
+  artifactKey: Guid(34a1fc02e0ecae146b07e6b17b1035f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OctoMan/Prefabs/WallPieces/Wall06.prefab using Guid(34a1fc02e0ecae146b07e6b17b1035f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86148a3d20dface37fc9bff270d0b0f6') in 0.038864 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
+  Time since last request: 0.000038 seconds.
   path: Assets/OctoMan/Prefabs/WallPieces/Wall08.prefab
   artifactKey: Guid(c7eb90ce76520bf40894bc2e09d75a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/OctoMan/Prefabs/WallPieces/Wall08.prefab using Guid(c7eb90ce76520bf40894bc2e09d75a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e247fbca606295a29b92737b7723b2a2') in 0.023936 seconds 
+Start importing Assets/OctoMan/Prefabs/WallPieces/Wall08.prefab using Guid(c7eb90ce76520bf40894bc2e09d75a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '492162f09248adfe1327fb49c0906330') in 0.026163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.239861 seconds.
+  path: Assets/OctoMan/Animations/AOC_Inky.overrideController
+  artifactKey: Guid(f99cf8d3afb5cb448b1f3d2e22398373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/OctoMan/Animations/AOC_Inky.overrideController using Guid(f99cf8d3afb5cb448b1f3d2e22398373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b43177741e7b4709334cd8f00a20a7') in 0.029174 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

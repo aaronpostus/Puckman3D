@@ -7,7 +7,7 @@ using UnityEngine.AI;
 namespace OttiPostLewis.Lab6
 {
 
-    public interface IGhostState
+    public interface IGhostState 
     {
         IGhostState DoState(Ghost ghost, Vector3 direction, NavMeshAgent agent, Vector3 destination);
     }
