@@ -27,7 +27,7 @@ public class PacmanAnimation : MonoBehaviour
         selectedGame = (int) Gamemodes.Story;
         //added so compiler doesnt complain
         animationTime = 0f;
-        transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
+        //transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
     }
 
     // Update is called once per frame
