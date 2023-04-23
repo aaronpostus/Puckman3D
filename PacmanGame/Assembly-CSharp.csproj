@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Ghost\IGhostState.cs" />
     <Compile Include="Assets\Scripts\TitleScreen\BerrySpin.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostExitHomeState.cs" />
+    <Compile Include="Assets\Scripts\Ghost\GhostUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
