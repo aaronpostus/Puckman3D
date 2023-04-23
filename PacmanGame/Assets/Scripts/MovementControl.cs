@@ -7,6 +7,7 @@ namespace OttiPostLewis.Lab6
     {
 
         [SerializeField] private GameObject playerToMove;
+        public static bool canMove = false;
         private InputAction moveAction;
         float playerSpeed = 4f;
         float raySize;
@@ -26,7 +27,6 @@ namespace OttiPostLewis.Lab6
             playerTransform = playerToMove.transform;
             raySize = 0.6f;
             targetRotation = Quaternion.identity;
-
             SetDirections();
             // Calculate direction vectors
       
@@ -62,38 +62,38 @@ namespace OttiPostLewis.Lab6
 
         private void Update()
         {
-            LockMovement();
+            if (canMove) {
 
-            Vector2 direction = moveAction.ReadValue<Vector2>();
-            Vector3 movementDirection = Vector3.zero;
+                LockMovement();
 
-            if (direction.x > 0f && canMoveRight)
-            {
-                targetRotation = Quaternion.LookRotation(rightDirection);
-                movementDirection = rightDirection;
-            }
-            else if (direction.x < 0f && canMoveLeft)
-            {
-                targetRotation = Quaternion.LookRotation(leftDirection);
-                movementDirection = leftDirection;
-            }
-            else if (direction.y > 0f && canMoveForward)
-            {
-                targetRotation = Quaternion.LookRotation(forwardDirection);
-                movementDirection = forwardDirection;
-            }
-            else if (direction.y < 0f && canMoveBackward)
-            {
-                targetRotation = Quaternion.LookRotation(backwardDirection);
-                movementDirection = backwardDirection;
-            }
+                Vector2 direction = moveAction.ReadValue<Vector2>();
+                Vector3 movementDirection = Vector3.zero;
 
-            playerTransform.rotation = targetRotation;
-            playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
+                if (direction.x > 0f && canMoveRight)
+                {
+                    targetRotation = Quaternion.LookRotation(rightDirection);
+                    movementDirection = rightDirection;
+                }
+                else if (direction.x < 0f && canMoveLeft)
+                {
+                    targetRotation = Quaternion.LookRotation(leftDirection);
+                    movementDirection = leftDirection;
+                }
+                else if (direction.y > 0f && canMoveForward)
+                {
+                    targetRotation = Quaternion.LookRotation(forwardDirection);
+                    movementDirection = forwardDirection;
+                }
+                else if (direction.y < 0f && canMoveBackward)
+                {
+                    targetRotation = Quaternion.LookRotation(backwardDirection);
+                    movementDirection = backwardDirection;
+                }
+
+                playerTransform.rotation = targetRotation;
+                playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
+            }
         }
-
-
-
 
 
     }

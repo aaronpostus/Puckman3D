@@ -12,7 +12,7 @@ namespace OttiPostLewis.Lab6
    
         void Start()
         {
-            gameManager = GameObject.FindObjectOfType<GameManager>();
+            gameManager = FindObjectOfType<GameManager>();
 
             gameManager.AddPellet(gameObject);
 
@@ -20,6 +20,7 @@ namespace OttiPostLewis.Lab6
 
         private void OnTriggerEnter(Collider other)
         {
+
             gameManager.ConsumePellet(gameObject);
             Destroy(gameObject);
 
