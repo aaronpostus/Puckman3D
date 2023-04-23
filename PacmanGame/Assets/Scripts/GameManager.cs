@@ -18,11 +18,21 @@ namespace OttiPostLewis.Lab6
         private int ghostMultiplier;
         public TextMeshProUGUI scoreText;
 
-        private void Awake()
-        {
+        public static GameManager Instance { get; private set; }
+        private void Awake() 
+        {  
             pellets = new List<GameObject>();
             inputScheme = new PacmanInputs();
             movementController.Initialize(inputScheme.Pacman.Movement);
+        
+            if (Instance != null && Instance != this) 
+            { 
+                Destroy(this); 
+            } 
+            else 
+            { 
+                Instance = this; 
+            } 
         }
 
         private void Start()
