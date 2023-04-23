@@ -14,7 +14,7 @@ namespace OttiPostLewis.Lab6
         public List<GameObject> pellets;
 
         public int playerScore;
-        public int remainingLives;
+        public int remainingLives; 
         private int ghostMultiplier;
         public TextMeshProUGUI scoreText;
 
@@ -24,7 +24,7 @@ namespace OttiPostLewis.Lab6
             pellets = new List<GameObject>();
             inputScheme = new PacmanInputs();
             movementController.Initialize(inputScheme.Pacman.Movement);
-        
+                
             if (Instance != null && Instance != this) 
             { 
                 Destroy(this); 
