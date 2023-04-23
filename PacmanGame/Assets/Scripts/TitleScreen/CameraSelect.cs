@@ -37,13 +37,17 @@ public class PacmanCamera : MonoBehaviour
             if(mouseClick.WasPressedThisFrame()) {
                 state = (int) State.CameraSelected;
                 if(selectedCamera == (int) CameraModes.Isometric) {
-                    //transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
-                    //animationTime = 3.5f;
+                    transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
+                    animationTime = 3.5f;
                 }
                 //else if(selectedCamera )
+                else if (selectedCamera == (int) CameraModes.TopDown) {
+                    transform.position = new Vector3(transform.position.x, medY, transform.position.z);
+                    animationTime = 3.5f;
+                }
                 else {
                     transform.position = new Vector3(transform.position.x, minY, transform.position.z);
-                    animationTime = 4f;
+                    animationTime = 4f;                    
                 }
             }
             else {
@@ -58,7 +62,10 @@ public class PacmanCamera : MonoBehaviour
                     selectedCamera = (int) CameraModes.Isometric;
                 }
                 else if(y > middleY2) {
-                    if(transform.position.y < medY) {
+                    if(Mathf.Abs(transform.position.y - medY) < 0.01f) {
+
+                    }
+                    else if(transform.position.y < medY) {
                         transform.position = new Vector3(position.x, position.y + (speed * Time.deltaTime), position.z);
                     }
                     else if (transform.position.y > medY) {
@@ -76,15 +83,17 @@ public class PacmanCamera : MonoBehaviour
         }
         else {
             if(animationTime <= 0f) {
-                // start game
             } else {
-                /**if(selectedCamera == (int) CameraModes.Isometric && transform.position.x > storyMinX) {
+                if(selectedCamera == (int) CameraModes.Isometric && transform.position.x > isometricX) {
                     transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);
                 }
-                else if(selectedCamera == (int) Gamemodes.Endless && transform.position.x > endlessMinX) {
+                else if(selectedCamera == (int) CameraModes.TopDown && transform.position.x > topdownX) {
                     transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);
                 }
-                animationTime -= Time.deltaTime;**/
+                else if(selectedCamera == (int) CameraModes.Mixed && transform.position.x > mixedX) {
+                    transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);
+                }
+                animationTime -= Time.deltaTime;
             }
         } 
     }
