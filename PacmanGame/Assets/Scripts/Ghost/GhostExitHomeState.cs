@@ -9,18 +9,19 @@ namespace OttiPostLewis.Lab6
 
     public class GhostExitHomeState : IGhostState
     {
-
-        private Vector3 direction;
-        private int speed = 5;
         private NavMeshAgent agent;
         private Ghost ghost;
         private Vector3 destination;
         private bool computeDestination = true;
         private float positionThreshold = 0.01f;
+        private float homeZOffset = 2.5f;
+        private float timer = 0f;
+        private float clydeLeaveTime = 3f;
+        private float pinkyLeaveTime = 6f;
+        private float inkyLeaveTime = 9f;
 
-        public IGhostState DoState(Ghost ghost, Vector3 direction, NavMeshAgent agent, Vector3 destination)
+        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination)
         {
-            this.direction = direction;
             this.ghost = ghost;
             this.agent = agent;
             ExitHome();
@@ -35,30 +36,57 @@ namespace OttiPostLewis.Lab6
 
         private void ExitHome()
         {
-            //change to default animation
-            ChangeAnimation();
-
-            //stagger
-            //??
+            timer += Time.deltaTime;
 
             if (computeDestination)
             {
+                //change to default animation
+                ChangeAnimation();
                 GameObject home = GameObject.Find("Home");
-                destination = new Vector3(home.transform.position.x, ghost.transform.position.y, home.transform.position.z + 2.5f);
-                Debug.Log("exit location: " + destination);
-                agent.SetDestination(destination);
-                computeDestination = false;
+                destination = new Vector3(home.transform.position.x, ghost.transform.position.y, home.transform.position.z + homeZOffset);
+                Stagger();
             }
-
-            //do angle stuff
-            //??
 
         }
 
         private void ChangeAnimation()
         {
+            Debug.Log("changing animation");
             ghost.transform.GetChild(0).gameObject.SetActive(true);
+            ghost.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(true);
             ghost.transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+        //only staggers at the start of the level so timer is not reset
+        private void Stagger()
+        {
+            if (ghost.name == "Blinky")
+            {
+                Debug.Log("blinky is leaving");
+                agent.SetDestination(destination);
+                computeDestination = false;
+            }
+
+            else if (ghost.name == "Clyde" && timer > clydeLeaveTime)
+            {
+                Debug.Log("clyde is leaving");
+                agent.SetDestination(destination);
+                computeDestination = false;
+            }
+
+            else if (ghost.name == "Pinky" && timer > pinkyLeaveTime)
+            {
+                Debug.Log("pinky is leaving");
+                agent.SetDestination(destination);
+                computeDestination = false;
+            }
+
+            else if (ghost.name == "Inky" && timer > inkyLeaveTime)
+            {
+                Debug.Log("inky is leaving");
+                agent.SetDestination(destination);
+                computeDestination = false;
+            }
         }
 
     }

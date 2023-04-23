@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
-    <Compile Include="Assets\Scripts\Ghost\RotateTest.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostFleeState.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostWanderState.cs" />
     <Compile Include="Assets\Scripts\Ghost\Ghost.cs" />
