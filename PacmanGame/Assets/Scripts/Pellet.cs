@@ -14,7 +14,7 @@ namespace OttiPostLewis.Lab6
         {
             gameManager = FindObjectOfType<GameManager>();
 
-            gameManager.AddPellet(gameObject);
+           // gameManager.AddPellet(gameObject);
 
         }
 

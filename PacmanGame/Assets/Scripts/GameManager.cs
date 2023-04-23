@@ -36,25 +36,25 @@ namespace OttiPostLewis.Lab6
             } 
         }
 
-        private void Start()
-        {
+        //private void Start()
+        //{
 
-            playerScore = 0;
-            scoreText.text = "Score: " + playerScore;
-            remainingLives = 4;
+        //    playerScore = 0;
+        //    scoreText.text = "Score: " + playerScore;
+        //    remainingLives = 4;
 
-        }
+        //}
 
-        private void OnEnable()
-        {
-            var _ = new QuitHandler(inputScheme.Pacman.Quit);
-        }
+        //private void OnEnable()
+        //{
+        //    var _ = new QuitHandler(inputScheme.Pacman.Quit);
+        //}
 
-        public void AddPellet(GameObject gameObject)
-        {
-            pellets.Add(gameObject);
+        //public void AddPellet(GameObject gameObject)
+        //{
+        //    pellets.Add(gameObject);
 
-        }
+        //}
 
         
         public void ConsumePellet(GameObject gameObject)

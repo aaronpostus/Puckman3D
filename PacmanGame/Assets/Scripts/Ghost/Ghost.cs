@@ -13,7 +13,7 @@ namespace OttiPostLewis.Lab6
         public GhostFleeState fleeState = new GhostFleeState();
         public GhostReturnHomeState returnHomeState = new GhostReturnHomeState();
         public GhostExitHomeState exitHomeState = new GhostExitHomeState();
-        public static bool canMove = false;
+        public static bool canMove = true;
 
         [SerializeField] private NavMeshAgent agent;
 
@@ -92,8 +92,6 @@ namespace OttiPostLewis.Lab6
   //fix agent speed/acceleration/etc so it doesnt miss turns
 
   //add pacman state checks 
-
-  //sound manager
 
   //test
 
