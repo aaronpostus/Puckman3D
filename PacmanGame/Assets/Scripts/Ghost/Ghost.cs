@@ -13,6 +13,7 @@ namespace OttiPostLewis.Lab6
         public GhostFleeState fleeState = new GhostFleeState();
         public GhostReturnHomeState returnHomeState = new GhostReturnHomeState();
         public GhostExitHomeState exitHomeState = new GhostExitHomeState();
+        public static bool canMove = false;
 
         [SerializeField] private NavMeshAgent agent;
 
@@ -23,29 +24,22 @@ namespace OttiPostLewis.Lab6
         private Vector3 destination;
         private Ray sight;
 
-        private Vector3 initialPosition;
-        //private List<Ray> sightRays = new List<Ray>();
-        //private Vector3 direction2;
-        //private Vector3 direction3;
-
         private void OnEnable()
         {
             currentDirection = transform.forward;
             forward = Vector3.forward;
             currentState = exitHomeState;
-            initialPosition = transform.position;
         }
 
         void Update()
         {
-            currentState = currentState.DoState(this, currentDirection, agent, destination);
-            UpdateSight();
-            DrawRay();
-            CheckForPacman();
-
-            //locking x and z rotations, locking y position ???
-            //transform.position = new Vector3(transform.position.x, initialPosition.y, transform.position.z);
-            //transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            if (canMove)
+            {
+                currentState = currentState.DoState(this, agent, destination);
+                UpdateSight();
+                DrawRay();
+                CheckForPacman();
+            }
         }
 
         private void OnTriggerEnter(Collider other)
@@ -60,10 +54,6 @@ namespace OttiPostLewis.Lab6
         private void UpdateSight()
         {         
             sight = new Ray(transform.position, transform.TransformDirection(forward * sightRange));
-
-            //sightRays.Add(new Ray(transform.position, transform.TransformDirection(forward * sightRange)));
-            //sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction2 * sightRange)));
-            //sightRays.Add(new Ray(transform.position, transform.TransformDirection(direction3 * sightRange)));
         }
 
         private void CheckForPacman()
@@ -76,7 +66,7 @@ namespace OttiPostLewis.Lab6
             //else if
             if (Physics.Raycast(sight, out RaycastHit hit, sightRange))
             {
-                Debug.Log("ghost sees something");
+                //Debug.Log("ghost sees something");
                 if (hit.collider.CompareTag("Player"))
                 {
                     Debug.Log("Ghost sees pacman");
@@ -88,12 +78,9 @@ namespace OttiPostLewis.Lab6
 
         }
 
-        //for debugging purposes
         private void DrawRay()
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(forward * sightRange), Color.red);
-            //Debug.DrawRay(transform.position, transform.TransformDirection(direction2 * sightRange), Color.red);
-            //Debug.DrawRay(transform.position, transform.TransformDirection(direction3 * sightRange), Color.red);
         }
 
     }
@@ -102,11 +89,12 @@ namespace OttiPostLewis.Lab6
 
 //TODO:
 
-//complete states:
-//exitHome: stagger ghosts
-//wander: fix manual rotations
-//all: add manual rotations
+  //fix agent speed/acceleration/etc so it doesnt miss turns
 
-//sound manager
+  //add pacman state checks 
 
-//add ghosts and navmeshes to all levels
+  //sound manager
+
+  //test
+
+  //utility class maybe

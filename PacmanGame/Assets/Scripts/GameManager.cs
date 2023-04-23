@@ -15,6 +15,12 @@ namespace OttiPostLewis.Lab6
         public List<string> levels;
         public static int playerScore;
         public static int remainingLives;
+        [SerializeField] private MovementControl movementController;
+        [SerializeField] private SoundManager soundManager;
+        private PacmanInputs inputScheme;
+
+        public List<GameObject> pellets;
+
         private int ghostMultiplier;
 
         public enum CameraModes : int { Isometric = 0, TopDown = 1, Mixed = 2 };
@@ -48,8 +54,8 @@ namespace OttiPostLewis.Lab6
             levels.Add("Level2");
             levels.Add("Level2");
             pellets = new List<GameObject>();
-            //inputScheme = new PacmanInputs();
-            //movementController.Initialize(inputScheme.Pacman.Movement);
+            inputScheme = new PacmanInputs();
+            movementController.Initialize(inputScheme.Pacman.Movement);
         }
         private void Start()
         {
@@ -75,7 +81,8 @@ namespace OttiPostLewis.Lab6
         {
             playerScore += 10;
             pellets.Remove(gameObject);
-           
+            soundManager.PlaySound("Eat");
+
         }
 
 
