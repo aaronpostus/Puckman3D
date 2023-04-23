@@ -57,7 +57,6 @@
      <Compile Include="Assets\Scripts\TitleScreen\BerrySpin.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
      <Compile Include="Assets\Scripts\Ghost\GhostExitHomeState.cs" />
-     <Compile Include="Assets\Scripts\Ghost\RotateTest.cs" />
      <Compile Include="Assets\Scripts\Ghost\GhostReturnHomeState.cs" />
      <Compile Include="Assets\Scripts\Outlines\Scripts\RendererFeatures\ScreenSpaceOutlines.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
