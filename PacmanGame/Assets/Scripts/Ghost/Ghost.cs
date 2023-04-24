@@ -27,7 +27,6 @@ namespace OttiPostLewis.Lab6
         {
             forward = Vector3.forward;
             currentState = exitHomeState;
-            //Physics.IgnoreCollision(GetComponent<Collider>(), otherObject.GetComponent<Collider>());
         }
 
         void Update()
@@ -93,6 +92,6 @@ namespace OttiPostLewis.Lab6
 
   //adjust speeds for each level
 
-  //make ghosts able to move through each other
+  //reset method
 
   //test
