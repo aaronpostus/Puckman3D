@@ -62,28 +62,24 @@ namespace OttiPostLewis.Lab6
         {
             if (ghost.name == "Blinky")
             {
-                Debug.Log("blinky is leaving");
                 agent.SetDestination(destination);
                 computeDestination = false;
             }
 
             else if (ghost.name == "Clyde" && timer > clydeLeaveTime)
             {
-                Debug.Log("clyde is leaving");
                 agent.SetDestination(destination);
                 computeDestination = false;
             }
 
             else if (ghost.name == "Pinky" && timer > pinkyLeaveTime)
             {
-                Debug.Log("pinky is leaving");
                 agent.SetDestination(destination);
                 computeDestination = false;
             }
 
             else if (ghost.name == "Inky" && timer > inkyLeaveTime)
             {
-                Debug.Log("inky is leaving");
                 agent.SetDestination(destination);
                 computeDestination = false;
             }
