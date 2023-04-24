@@ -1162,7 +1162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1599034784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1178,9 +1178,8 @@ MonoBehaviour:
   UIPrefab: {fileID: 2861128170698438303, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
   pellets: []
   levels: []
-  scoreText: {fileID: 0}
-  selectedCameraMode: 0
-  selectedGameMode: 0
+  movementController: {fileID: 0}
+  soundManager: {fileID: 0}
   currentGameState: 0
 --- !u!4 &1599034785
 Transform:
