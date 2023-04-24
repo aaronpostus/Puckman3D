@@ -15,7 +15,6 @@ namespace OttiPostLewis.Lab6
         private bool computeDestination = true;
         private float positionThreshold = 0.01f;
         private float homeZOffset = 2.5f;
-        private float timer = 0f;
         private float clydeLeaveTime = 3f;
         private float pinkyLeaveTime = 6f;
         private float inkyLeaveTime = 9f;
@@ -37,7 +36,7 @@ namespace OttiPostLewis.Lab6
 
         private void ExitHome()
         {
-            timer += Time.deltaTime;
+            ghost.initialExitTimer += Time.deltaTime;
 
             if (computeDestination)
             {
@@ -66,19 +65,19 @@ namespace OttiPostLewis.Lab6
                 computeDestination = false;
             }
 
-            else if (ghost.name == "Clyde" && timer > clydeLeaveTime)
+            else if (ghost.name == "Clyde" && ghost.initialExitTimer > clydeLeaveTime)
             {
                 agent.SetDestination(destination);
                 computeDestination = false;
             }
 
-            else if (ghost.name == "Pinky" && timer > pinkyLeaveTime)
+            else if (ghost.name == "Pinky" && ghost.initialExitTimer > pinkyLeaveTime)
             {
                 agent.SetDestination(destination);
                 computeDestination = false;
             }
 
-            else if (ghost.name == "Inky" && timer > inkyLeaveTime)
+            else if (ghost.name == "Inky" && ghost.initialExitTimer > inkyLeaveTime)
             {
                 agent.SetDestination(destination);
                 computeDestination = false;
