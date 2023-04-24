@@ -43,6 +43,9 @@ namespace OttiPostLewis.Lab6
                 }
                 return instance;
             }
+            set {
+                instance = value;
+            }
         }
         public GameManager() {
             levels = new List<string>();
