@@ -21464,7 +21464,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.1
+  m_VoxelSize: 0.11666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 252db32b2cce8ed428d78f12a33cb55a, type: 2}
 --- !u!4 &2002961389 stripped
@@ -22899,6 +22899,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 949223004351160578, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 949223004351160578, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -22908,7 +22912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 949223004351160579, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 949223004351160579, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_AutoBraking
@@ -22921,6 +22925,10 @@ PrefabInstance:
     - target: {fileID: 949223004351160579, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_AngularSpeed
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 949223004351160579, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
+      propertyPath: avoidancePriority
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 949223004351160581, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_RootOrder
@@ -23078,7 +23086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1819313339861307839, guid: b940871214ccf2647ad1cbd645bac070, type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1819313339861307839, guid: b940871214ccf2647ad1cbd645bac070, type: 3}
       propertyPath: m_AutoBraking
@@ -23091,6 +23099,10 @@ PrefabInstance:
     - target: {fileID: 1819313339861307839, guid: b940871214ccf2647ad1cbd645bac070, type: 3}
       propertyPath: m_AngularSpeed
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819313339861307839, guid: b940871214ccf2647ad1cbd645bac070, type: 3}
+      propertyPath: avoidancePriority
+      value: 99
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1819313339861307837, guid: b940871214ccf2647ad1cbd645bac070, type: 3}
@@ -23160,7 +23172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288537724230591077, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288537724230591077, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288537724230591077, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
       propertyPath: m_AutoBraking
@@ -23173,6 +23189,14 @@ PrefabInstance:
     - target: {fileID: 4288537724230591077, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
       propertyPath: m_AngularSpeed
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288537724230591077, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
+      propertyPath: avoidancePriority
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288537724230591078, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288537724230591080, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
       propertyPath: m_Name
@@ -23270,7 +23294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7417030631928762828, guid: c553982e436766b47befe22605a33f38, type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7417030631928762828, guid: c553982e436766b47befe22605a33f38, type: 3}
       propertyPath: m_AutoBraking
@@ -23283,6 +23307,10 @@ PrefabInstance:
     - target: {fileID: 7417030631928762828, guid: c553982e436766b47befe22605a33f38, type: 3}
       propertyPath: m_AngularSpeed
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417030631928762828, guid: c553982e436766b47befe22605a33f38, type: 3}
+      propertyPath: avoidancePriority
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 7417030631928762829, guid: c553982e436766b47befe22605a33f38, type: 3}
       propertyPath: m_Radius

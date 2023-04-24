@@ -12,7 +12,7 @@ namespace OttiPostLewis.Lab6
         public GhostFleeState fleeState = new GhostFleeState();
         public GhostReturnHomeState returnHomeState = new GhostReturnHomeState();
         public GhostExitHomeState exitHomeState = new GhostExitHomeState();
-        public static bool canMove = false;
+        public static bool canMove = true;
         public static float multiplier = 1;
 
         [SerializeField] private NavMeshAgent agent;

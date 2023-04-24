@@ -69,6 +69,7 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\PacmanInputs.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\Scripts\Ghost\GhostUtility.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\Ghost\IGhostState.cs" />
     <Compile Include="Assets\Scripts\TitleScreen\BerrySpin.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostExitHomeState.cs" />
-    <Compile Include="Assets\Scripts\Ghost\GhostUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
