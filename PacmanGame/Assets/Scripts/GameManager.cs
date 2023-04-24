@@ -139,11 +139,7 @@ namespace OttiPostLewis.Lab6
             FreezeGhosts(false);
         }
         public void ResetGhostAndPacmanPositions() {
-            Vector3 oldPacManPosition = MovementControl.playerTransform.position;
-            if(GameManager.selectedGameMode == (int) GameManager.Gamemodes.Story) {
-                MovementControl.playerTransform.position = new Vector3();
-            }
-
+            levelManager.ResetGhostAndPacmanPositions();
             
         }
         public void FreezePacman(bool shouldFreeze) {
