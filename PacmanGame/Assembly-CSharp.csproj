@@ -56,7 +56,9 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\MenuScreensAndUI\EndScreenInput.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\MenuScreensAndUI\PacmanCamera.cs" />
     <Compile Include="Assets\Scripts\Pellet.cs" />
     <Compile Include="Assets\Scripts\MovementControl.cs" />
     <Compile Include="Assets\Scripts\MenuScreensAndUI\HoverAnimation.cs" />
@@ -70,8 +72,10 @@
     <Compile Include="Assets\PacmanInputs.cs" />
     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostUtility.cs" />
+    <Compile Include="Assets\Scripts\LevelController.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\MenuScreensAndUI\UIController.cs" />
     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostFleeState.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostWanderState.cs" />
@@ -81,10 +85,6 @@
     <Compile Include="Assets\Scripts\Ghost\IGhostState.cs" />
     <Compile Include="Assets\Scripts\MenuScreensAndUI\BerrySpin.cs" />
     <Compile Include="Assets\Scripts\Ghost\GhostExitHomeState.cs" />
-    <Compile Include="Assets\Scripts\MenuScreensAndUI\UIController.cs" />
-    <Compile Include="Assets\Scripts\LevelController.cs" />
-    <Compile Include="Assets\Scripts\MenuScreensAndUI\PacmanCamera.cs" />
-    <Compile Include="Assets\Scripts\MenuScreensAndUI\EndScreenInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
