@@ -15,6 +15,7 @@ namespace OttiPostLewis.Lab6
         public static bool canMove = false;
         public static float multiplier = 1;
         public bool computeInitialDest = true;
+        public float initialExitTimer = 0;
 
         [SerializeField] private NavMeshAgent agent;
 
@@ -23,11 +24,15 @@ namespace OttiPostLewis.Lab6
         private Vector3 forward;
         private Vector3 destination;
         private Ray sight;
+        private Vector3 initialPosition;
+        private Quaternion initialRotation;
 
         private void OnEnable()
         {
             forward = Vector3.forward;
             currentState = exitHomeState;
+            initialPosition = transform.position;
+            initialRotation = transform.rotation;
         }
 
         void Update()
@@ -83,7 +88,10 @@ namespace OttiPostLewis.Lab6
         }
 
         public void ResetGhost() {
-            // add implementation
+            transform.position = initialPosition;
+            transform.rotation = initialRotation;
+            initialExitTimer = 0;
+            currentState = exitHomeState;
         }
     }
 }
@@ -94,7 +102,5 @@ namespace OttiPostLewis.Lab6
   //add pacman state checks 
 
   //adjust speeds for each level
-
-  //reset method
 
   //test
