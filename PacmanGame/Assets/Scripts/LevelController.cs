@@ -34,7 +34,7 @@ namespace OttiPostLewis.Lab6 {
                     break;
             }
             GameManager.Instance.PauseLevel();
-            GameManager.Instance.ResetGhostAndPacmanPositions();
+            ResetGhostAndPacmanPositions();
         }
         public void ResetGhostAndPacmanPositions() {
             MovementControl.playerTransform.position = GetStartingPacmanLocation();

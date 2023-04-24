@@ -11,7 +11,7 @@ namespace OttiPostLewis.Lab6
         [SerializeField] GameObject UIPrefab;
         private PacmanInputs inputScheme;
 
-        public List<GameObject> pellets;
+        public GameObject pellets;
         public List<string> levels;
         public static int playerScore;
         public static int remainingLives;
@@ -54,7 +54,6 @@ namespace OttiPostLewis.Lab6
             levels.Add("Level1Final");
             levels.Add("Level2");
             levels.Add("Level2");
-            pellets = new List<GameObject>();
          
         }
 
@@ -62,6 +61,7 @@ namespace OttiPostLewis.Lab6
         {
             inputScheme = new PacmanInputs();
             movementController.Initialize(inputScheme.Pacman.Movement);
+
         }
         private void Start()
         {
@@ -75,25 +75,17 @@ namespace OttiPostLewis.Lab6
         {
             var _ = new QuitHandler(inputScheme.Pacman.Quit);
         }
-
-        public void AddPellet(GameObject gameObject)
-        {
-            pellets.Add(gameObject);
-
-        }
-
         
         public void ConsumePellet(GameObject gameObject)
         {
             playerScore += 10;
-            pellets.Remove(gameObject);
             soundManager.PlaySound("Eat");
 
         }
 
 
         // This method will be called whenever a power pellet is consumed
-        public void ConsumePowerPellet()
+        public void ConsumePowerPellet(GameObject gameObject)
         {
             playerScore += 10;
             //Chase Ghosts
@@ -130,11 +122,13 @@ namespace OttiPostLewis.Lab6
             }
         }
         public void PauseLevel() {
+            currentGameState = (int) Gamestate.Loading;
             FreezePacman(true);
             FreezeGhosts(true);
         }
         // invoked by the UI once the countdown completes.
         public void StartLevel() {
+            currentGameState = (int) Gamestate.GamePlay;
             FreezePacman(false);
             FreezeGhosts(false);
         }
@@ -152,20 +146,21 @@ namespace OttiPostLewis.Lab6
         public void LevelWon()
         {
             currentGameState = (int) Gamestate.Loading;
+            PauseLevel();
+            Debug.Log("Level won!");
            //Load the scene for the new level
 
 
         }
-
         //  Method called when the player dies
-        public void OnPlayerDeath()
+        public void Die()
         {
             soundManager.PlaySound("Death");
+            PauseLevel();
             if (remainingLives > 0)
             {
+
                 ResetLevel();
-             
-                
             }
             else
             {
@@ -198,9 +193,14 @@ namespace OttiPostLewis.Lab6
 
         public void Update()
         {
-            if (currentGameState == (int) Gamestate.GamePlay && pellets.Count == 0)
+
+            if (currentGameState == (int) Gamestate.GamePlay)
             {
-                LevelWon();
+                Debug.Log("number of children" + pellets.transform.childCount);
+                if(pellets.transform.childCount == 0) {
+
+                    //LevelWon();
+                }
             }
             //Update UI Elements
         }

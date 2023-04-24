@@ -14,14 +14,17 @@ namespace OttiPostLewis.Lab6 {
         {
             mouseInput = new MouseInput();
             mouseClick = mouseInput.Mouse.Click;
+            mouseClick.Enable();
             GameManager.Instance = null;
-            SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            
+            if(mouseClick.triggered) {
+                SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
+            }
         }
     }
 }
