@@ -94,7 +94,5 @@ namespace OttiPostLewis.Lab6
                 playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
             }
         }
-
-
     }
 }

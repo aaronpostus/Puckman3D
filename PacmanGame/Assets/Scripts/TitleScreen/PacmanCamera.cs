@@ -5,16 +5,16 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace OttiPostLewis.Lab6 {
-    public class PacmanAnimation : MonoBehaviour
+    public class PacmanCamera : MonoBehaviour
     {
-        [SerializeField] float maxY, middleY, minY, speed, eatSpeed, endlessMinX, storyMinX;
+        [SerializeField] float maxY, medY, minY, middleY1, middleY2, speed, eatSpeed, isometricX, topdownX, mixedX;
         [SerializeField] GameObject pacman;
         private MouseInput mouseInput;
         private InputAction mousePosition, mouseClick;
         private Transform transform;
-        private enum State : int { PacmanCursorFollow = 0, GamemodeSelected = 1 };
+        private enum State : int { PacmanCursorFollow = 0, CameraSelected = 1, AnimationComplete = 2 };
         private GameManager gm = GameManager.Instance;
-        private int state, selectedGame;
+        private int state, selectedCamera;
         private float animationTime;
         // Start is called before the first frame update
         void Start()
@@ -26,7 +26,7 @@ namespace OttiPostLewis.Lab6 {
             mouseClick.Enable();
             state = (int) State.PacmanCursorFollow;
             transform = pacman.transform;
-            selectedGame = (int) GameManager.Gamemodes.Story;
+            selectedCamera = (int) GameManager.CameraModes.Isometric;
             //added so compiler doesnt complain
             animationTime = 0f;
             //transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
@@ -37,45 +37,65 @@ namespace OttiPostLewis.Lab6 {
         {
             if(state == (int) State.PacmanCursorFollow) {
                 if(mouseClick.WasPressedThisFrame()) {
-                    state = (int) State.GamemodeSelected;
-                    if(selectedGame == (int) GameManager.Gamemodes.Story) {
+                    state = (int) State.CameraSelected;
+                    if(selectedCamera == (int) GameManager.CameraModes.Isometric) {
                         transform.position = new Vector3(transform.position.x, maxY, transform.position.z);
+                        animationTime = 3.5f;
+                    }
+                    //else if(selectedCamera )
+                    else if (selectedCamera == (int) GameManager.CameraModes.TopDown) {
+                        transform.position = new Vector3(transform.position.x, medY, transform.position.z);
                         animationTime = 3.5f;
                     }
                     else {
                         transform.position = new Vector3(transform.position.x, minY, transform.position.z);
-                        animationTime = 4f;
+                        animationTime = 4f;                    
                     }
                 }
                 else {
                     float y = mousePosition.ReadValue<Vector2>().y;
                     Vector3 position = transform.position;
+                    Debug.Log(y);
                     // move up
-                    if(y > middleY) {
+                    if(y > middleY1) {
                         if(transform.position.y < maxY) {
                             transform.position = new Vector3(position.x, position.y + (speed * Time.deltaTime), position.z);
                         }
-                        selectedGame = (int) GameManager.Gamemodes.Story;
+                        selectedCamera = (int) GameManager.CameraModes.Isometric;
                     }
-                    // move down 
-                    else if (y < middleY) {
+                    else if(y > middleY2) {
+                        if(Mathf.Abs(transform.position.y - medY) < 0.01f) {
+
+                        }
+                        else if(transform.position.y < medY) {
+                            transform.position = new Vector3(position.x, position.y + (speed * Time.deltaTime), position.z);
+                        }
+                        else if (transform.position.y > medY) {
+                            transform.position = new Vector3(position.x, position.y - (speed * Time.deltaTime), position.z);
+                        }
+                        selectedCamera = (int) GameManager.CameraModes.TopDown;
+                    }
+                    else {
                         if(transform.position.y > minY) {
                             transform.position = new Vector3(position.x, position.y - (speed * Time.deltaTime), position.z);
                         }
-                        selectedGame = (int) GameManager.Gamemodes.Endless;
+                        selectedCamera = (int) GameManager.CameraModes.Mixed;
                     }
                 }
             }
             else {
-                if(animationTime <= 0f) {
-                    // start game
-                    GameManager.selectedGameMode = selectedGame;
-                    SceneManager.LoadScene("CameraSelect", LoadSceneMode.Single);
+                if(animationTime <= 0f && state != (int) State.AnimationComplete) {
+                    GameManager.selectedCameraMode = selectedCamera;
+                    GameManager.Instance.StartNextLevel();
+                    state = (int) State.AnimationComplete;
                 } else {
-                    if(selectedGame == (int) GameManager.Gamemodes.Story && transform.position.x > storyMinX) {
+                    if(selectedCamera == (int) GameManager.CameraModes.Isometric && transform.position.x > isometricX) {
                         transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);
                     }
-                    else if(selectedGame == (int) GameManager.Gamemodes.Endless && transform.position.x > endlessMinX) {
+                    else if(selectedCamera == (int) GameManager.CameraModes.TopDown && transform.position.x > topdownX) {
+                        transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);
+                    }
+                    else if(selectedCamera == (int) GameManager.CameraModes.Mixed && transform.position.x > mixedX) {
                         transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);
                     }
                     animationTime -= Time.deltaTime;
