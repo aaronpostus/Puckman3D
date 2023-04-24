@@ -57,12 +57,17 @@ namespace OttiPostLewis.Lab6
             pellets = new List<GameObject>();
          
         }
+
+        private void Awake()
+        {
+            inputScheme = new PacmanInputs();
+            movementController.Initialize(inputScheme.Pacman.Movement);
+        }
         private void Start()
         {
             playerScore = 0;
             remainingLives = 4;
-            inputScheme = new PacmanInputs();
-            movementController.Initialize(inputScheme.Pacman.Movement);
+           
 
         }
 

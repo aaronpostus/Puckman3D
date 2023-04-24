@@ -7,7 +7,8 @@ namespace OttiPostLewis.Lab6
     {
 
         [SerializeField] private GameObject playerToMove;
-        public static bool canMove;
+        public static bool canMove = false;
+        public LayerMask layerMask;
         private InputAction moveAction;
         float playerSpeed = 4f;
         float raySize;
@@ -20,6 +21,7 @@ namespace OttiPostLewis.Lab6
         {
             this.moveAction = moveAction;
             moveAction.Enable();
+        
         }
 
         private void Start()
@@ -28,9 +30,17 @@ namespace OttiPostLewis.Lab6
             raySize = 0.45f;
             targetRotation = Quaternion.identity;
             SetDirections();
-            canMove = false;
+    
             // Calculate direction vectors
       
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (layerMask == (layerMask | (1 << other.gameObject.layer)))
+            {
+                // Do something with the collider...
+            }
         }
 
         private void SetDirections()
@@ -41,7 +51,6 @@ namespace OttiPostLewis.Lab6
             backwardDirection = -playerTransform.forward;
 
         }
-
 
         private void LockMovement()
         {
