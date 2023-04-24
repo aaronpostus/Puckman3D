@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using PacmanInput;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -9,12 +8,9 @@ namespace OttiPostLewis.Lab6
     public class GameManager : MonoBehaviour
     {
         [SerializeField] GameObject UIPrefab;
-        private PacmanInputs inputScheme;
-        public List<string> levels;
+         public List<string> levels;
         public static int playerScore;
         public static int remainingLives;
-        //[SerializeField] private MovementControl movementController;
-        private MovementControl movementController;
         [SerializeField] private SoundManager soundManager;
 
         private int ghostMultiplier;
@@ -41,8 +37,6 @@ namespace OttiPostLewis.Lab6
 
         private void Awake()
         {
-            inputScheme = new PacmanInputs();
-            movementController.Initialize(inputScheme.Pacman.Movement);
             DontDestroyOnLoad(this);
 
         }
@@ -54,11 +48,7 @@ namespace OttiPostLewis.Lab6
 
         }
 
-        private void OnEnable()
-        {
-            var _ = new QuitHandler(inputScheme.Pacman.Quit);
-        }
-        
+    
         public void ConsumePellet(GameObject gameObject)
         {
             playerScore += 10;
@@ -90,7 +80,7 @@ namespace OttiPostLewis.Lab6
             else {
                 SceneManager.LoadScene(levels[Random.Range(0,levels.Count)]);
             }
-            movementController = GameObject.Find("PacmanPrefab").transform.GetChild(0).GetComponent<MovementControl>();
+           
             InitializeCurrentLevel();
        }
         private void InitializeCurrentLevel() {
