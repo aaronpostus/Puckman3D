@@ -85,9 +85,12 @@ namespace OttiPostLewis.Lab6 {
             }
             else {
                 if(animationTime <= 0f && state != (int) State.AnimationComplete) {
+                    Debug.Log("76t83yuhgrf");
                     GameManager.selectedCameraMode = selectedCamera;
-                    GameManager.Instance.StartNextLevel();
                     state = (int) State.AnimationComplete;
+                    GameManager.Instance.StartNextLevel();
+
+
                 } else {
                     if(selectedCamera == (int) GameManager.CameraModes.Isometric && transform.position.x > isometricX) {
                         transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);
