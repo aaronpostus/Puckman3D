@@ -7,7 +7,7 @@ namespace OttiPostLewis.Lab6
     {
 
         [SerializeField] private GameObject playerToMove;
-        public static bool canMove = false;
+        public static bool canMove;
         private InputAction moveAction;
         float playerSpeed = 4f;
         float raySize;
@@ -28,6 +28,7 @@ namespace OttiPostLewis.Lab6
             raySize = 0.45f;
             targetRotation = Quaternion.identity;
             SetDirections();
+            canMove = false;
             // Calculate direction vectors
       
         }
@@ -62,7 +63,7 @@ namespace OttiPostLewis.Lab6
 
         private void Update()
         {
-            if (!canMove) {
+           if (!canMove) {
 
                 LockMovement();
 
@@ -93,6 +94,6 @@ namespace OttiPostLewis.Lab6
                 playerTransform.rotation = targetRotation;
                 playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
             }
-        }
+       }
     }
 }
