@@ -16,10 +16,9 @@ namespace OttiPostLewis.Lab6
         private bool computeDestination = true;
         private float positionThreshold = 0.01f;
 
-        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination)
+        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination, bool computeInitialDest)
         {
             this.ghost = ghost;
-            //this.destination = destination;
             this.agent = agent;
             agent.speed = this.speed * Ghost.multiplier;
             ReturnHome();

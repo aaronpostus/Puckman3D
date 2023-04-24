@@ -13,13 +13,14 @@ namespace OttiPostLewis.Lab6
         private NavMeshAgent agent;
         private Ghost ghost;
         private Vector3 destination;
-        private bool computeInitialDest = true;
+        private bool computeInitialDest;
         private float positionThreshold = 0.01f;
         private float range = 100f;
         private float speed = 5f;
 
-        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination)
+        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination, bool computeInitialDest)
         {
+            this.computeInitialDest = computeInitialDest;
             this.ghost = ghost;
             this.agent = agent;
             agent.speed = speed * Ghost.multiplier;
@@ -31,15 +32,14 @@ namespace OttiPostLewis.Lab6
 
         private void Wander()
         {
-
             if ((Mathf.Abs(ghost.transform.position.x - destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - destination.z) < positionThreshold) || computeInitialDest)
             {
                 randomPoint = ghost.transform.position + Random.insideUnitSphere * range;
                 NavMesh.SamplePosition(randomPoint, out NavMeshHit hit, range, NavMesh.AllAreas);
                 destination = hit.position;
                 agent.SetDestination(destination);
+                ghost.computeInitialDest = false;
             }
-            computeInitialDest = false;
 
             NavMeshPath path = agent.path;
             GhostUtility.RotateAtCorners(ghost, path, positionThreshold);
