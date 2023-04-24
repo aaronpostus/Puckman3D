@@ -51,20 +51,21 @@ namespace OttiPostLewis.Lab6
             levels.Add("Level2");
             levels.Add("Level2");
             pellets = new List<GameObject>();
-            //inputScheme = new PacmanInputs();
-            //movementController.Initialize(inputScheme.Pacman.Movement);
+         
         }
         private void Start()
         {
 
             playerScore = 0;
             remainingLives = 4;
+            inputScheme = new PacmanInputs();
+            movementController.Initialize(inputScheme.Pacman.Movement);
 
         }
 
         private void OnEnable()
         {
-            //var _ = new QuitHandler(inputScheme.Pacman.Quit);
+            var _ = new QuitHandler(inputScheme.Pacman.Quit);
         }
 
         public void AddPellet(GameObject gameObject)
