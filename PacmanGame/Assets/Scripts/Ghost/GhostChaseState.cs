@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//Author: Maddi
 namespace OttiPostLewis.Lab6
 {
     public class GhostChaseState : IGhostState

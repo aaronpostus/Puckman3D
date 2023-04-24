@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using static UnityEngine.UI.GridLayoutGroup;
 
+//Author: Maddi
 namespace OttiPostLewis.Lab6
 {
     public class GhostWanderState : IGhostState

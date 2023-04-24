@@ -4,6 +4,7 @@ using UnityEditorInternal.VR;
 using UnityEngine;
 using UnityEngine.AI;
 
+//Author: Maddi
 namespace OttiPostLewis.Lab6
 {
 

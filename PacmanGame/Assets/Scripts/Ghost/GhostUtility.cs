@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//Author: Maddi
 namespace OttiPostLewis.Lab6
 {
     public static class GhostUtility
@@ -17,11 +18,11 @@ namespace OttiPostLewis.Lab6
                 if (Mathf.Abs(ghost.transform.position.x - pathCorners[i].x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - pathCorners[i].z) < positionThreshold)
                 {
                     //check which direction it should turn for the next point in the path (so it is at pathCorner i now)
-                    if (i + 1 < pathCorners.Length)
+                    if (i+1 < pathCorners.Length)
                     {
-                        Debug.DrawLine(pathCorners[i], pathCorners[i + 1], Color.green);
+                        Debug.DrawLine(pathCorners[i], pathCorners[i+1], Color.green);
                         //find next direction ghost will travel
-                        direction = (pathCorners[i + 1] - pathCorners[i]).normalized;
+                        direction = (pathCorners[i+1] - pathCorners[i]).normalized;
 
                         if (direction.z >= 0.8f && (direction.x < direction.z))
                         {
