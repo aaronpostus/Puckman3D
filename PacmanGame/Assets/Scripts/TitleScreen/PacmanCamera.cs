@@ -12,7 +12,7 @@ namespace OttiPostLewis.Lab6 {
         private MouseInput mouseInput;
         private InputAction mousePosition, mouseClick;
         private Transform transform;
-        private enum State : int { PacmanCursorFollow = 0, CameraSelected = 1 };
+        private enum State : int { PacmanCursorFollow = 0, CameraSelected = 1, AnimationComplete = 2 };
         private GameManager gm = GameManager.Instance;
         private int state, selectedCamera;
         private float animationTime;
@@ -84,9 +84,10 @@ namespace OttiPostLewis.Lab6 {
                 }
             }
             else {
-                if(animationTime <= 0f) {
+                if(animationTime <= 0f && state != (int) State.AnimationComplete) {
                     GameManager.selectedCameraMode = selectedCamera;
                     GameManager.Instance.StartNextLevel();
+                    state = (int) State.AnimationComplete;
                 } else {
                     if(selectedCamera == (int) GameManager.CameraModes.Isometric && transform.position.x > isometricX) {
                         transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);

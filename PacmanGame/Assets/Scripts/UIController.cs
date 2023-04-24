@@ -43,6 +43,8 @@ namespace OttiPostLewis.Lab6 {
                 }
                 else if(animationTime > 0f){
                     countdownUIText.text = "GO! GO! GO! GO!";
+                    GameManager.Instance.FreezePacman(false);
+                    GameManager.Instance.FreezeGhosts(false);
                     countdownNum.SetActive(false);
                     imageObj.SetActive(false);
                 }

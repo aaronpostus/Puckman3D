@@ -17,9 +17,6 @@ namespace OttiPostLewis.Lab6
         public static int remainingLives;
         [SerializeField] private MovementControl movementController;
         [SerializeField] private SoundManager soundManager;
-        private PacmanInputs inputScheme;
-
-        public List<GameObject> pellets;
 
         private int ghostMultiplier;
 
@@ -50,12 +47,12 @@ namespace OttiPostLewis.Lab6
         public GameManager() {
             levels = new List<string>();
 
-            levels.Add("Level1Copy");
+            levels.Add("Level1Final");
             levels.Add("Level2");
             levels.Add("Level2");
             pellets = new List<GameObject>();
-            inputScheme = new PacmanInputs();
-            movementController.Initialize(inputScheme.Pacman.Movement);
+            //inputScheme = new PacmanInputs();
+            //movementController.Initialize(inputScheme.Pacman.Movement);
         }
         private void Start()
         {
@@ -112,7 +109,7 @@ namespace OttiPostLewis.Lab6
             }
             InitializeCurrentLevel();
        }
-       private void InitializeCurrentLevel() {
+        private void InitializeCurrentLevel() {
             Scene scene = SceneManager.GetSceneByName(levels[currentLevel-1]);
             GameObject[] objectsInScene = scene.GetRootGameObjects();
             foreach(GameObject gameObject in objectsInScene) {
@@ -120,10 +117,13 @@ namespace OttiPostLewis.Lab6
                     Debug.Log("Found");
                 }
             }
-            //GameObject ui = GameObject.Find("LevelUIPrefab");
-            //ui.SetActive(false);
-       }
-
+        }
+        public void FreezePacman(bool shouldFreeze) {
+            MovementControl.canMove = !shouldFreeze;
+        }
+        public void FreezeGhosts(bool shouldFreeze) {
+            Ghost.canMove = !shouldFreeze;
+        }
         //  Method to advance when the player beats the level
         public void LevelWon()
         {
