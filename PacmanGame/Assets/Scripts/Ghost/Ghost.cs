@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 namespace OttiPostLewis.Lab6
 {
-
     public class Ghost : MonoBehaviour
     {
         public GhostWanderState wanderState = new GhostWanderState();
@@ -14,21 +13,21 @@ namespace OttiPostLewis.Lab6
         public GhostReturnHomeState returnHomeState = new GhostReturnHomeState();
         public GhostExitHomeState exitHomeState = new GhostExitHomeState();
         public static bool canMove = false;
+        public static float multiplier = 1;
 
         [SerializeField] private NavMeshAgent agent;
 
         private IGhostState currentState;
-        private float sightRange = 9f; //sight range will be as long as level's length/width but should not see through walls
-        private Vector3 currentDirection;
+        private float sightRange = 10f; //may need to change
         private Vector3 forward;
         private Vector3 destination;
         private Ray sight;
 
         private void OnEnable()
         {
-            currentDirection = transform.forward;
             forward = Vector3.forward;
             currentState = exitHomeState;
+            //Physics.IgnoreCollision(GetComponent<Collider>(), otherObject.GetComponent<Collider>());
         }
 
         void Update()
@@ -49,6 +48,7 @@ namespace OttiPostLewis.Lab6
             {
                 currentState = returnHomeState;
             }
+            Debug.Log("hitting something");
         }
 
         private void UpdateSight()
@@ -89,12 +89,10 @@ namespace OttiPostLewis.Lab6
 
 //TODO:
 
-  //fix agent speed/acceleration/etc so it doesnt miss turns
-
   //add pacman state checks 
 
-  //sound manager
+  //adjust speeds for each level
+
+  //make ghosts able to move through each other
 
   //test
-
-  //utility class maybe

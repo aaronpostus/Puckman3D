@@ -11,13 +11,17 @@ namespace OttiPostLewis.Lab6
         private Ghost ghost;
         private Vector3 destination;
         private float positionThreshold = 0.01f;
+        private float speed = 5f;
 
         public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination)
         {
             this.ghost = ghost;
             this.agent = agent;
             this.destination = destination;
+            agent.speed = speed * Ghost.multiplier;
+            agent.updateRotation = true; //?? idk
             Chase();
+
             //return chase until ghost location = last known location of pacman
             if (Mathf.Abs(ghost.transform.position.x - destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - destination.z) < positionThreshold)
             {

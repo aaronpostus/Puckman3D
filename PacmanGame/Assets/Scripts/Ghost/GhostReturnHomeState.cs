@@ -9,22 +9,19 @@ namespace OttiPostLewis.Lab6
 
     public class GhostReturnHomeState : IGhostState
     {
-
-        private Vector3 direction;
         private int speed = 4;
         private NavMeshAgent agent;
         private Ghost ghost;
         private Vector3 destination;
         private bool computeDestination = true;
         private float positionThreshold = 0.01f;
-        private Vector3[] pathCorners;
 
         public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination)
         {
             this.ghost = ghost;
             //this.destination = destination;
             this.agent = agent;
-            agent.speed = this.speed;
+            agent.speed = this.speed * Ghost.multiplier;
             ReturnHome();
 
             if (Mathf.Abs(ghost.transform.position.x - destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - destination.z) < positionThreshold)
@@ -50,41 +47,7 @@ namespace OttiPostLewis.Lab6
                 computeDestination = false;
             }
             NavMeshPath path = agent.path;
-            pathCorners = path.corners;
-
-            for (int i = 0; i < pathCorners.Length; i++)
-            {
-                if (Mathf.Abs(ghost.transform.position.x - pathCorners[i].x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - pathCorners[i].z) < positionThreshold)
-                {
-                    if (i + 1 < pathCorners.Length)
-                    {
-                        Debug.DrawLine(pathCorners[i], pathCorners[i+1], Color.green);
-
-                        direction = (pathCorners[i+1] - pathCorners[i]).normalized;
-
-                        if (direction.z >= 0.8f && (direction.x < direction.z))
-                        {
-                            Debug.Log("rotate up");
-                            ghost.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                        }
-                        else if (direction.x >= 0.8f && (direction.x > direction.z))
-                        {
-                            Debug.Log("rotate right");
-                            ghost.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-                        }
-                        else if (direction.x <= -0.8f && (direction.x < direction.z))
-                        {
-                            Debug.Log("rotate left");
-                            ghost.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-                        }
-                        else if (direction.z <= -0.8f)
-                        {
-                            Debug.Log("rotate down");
-                            ghost.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-                        }
-                    }
-                }
-            }
+            GhostUtility.RotateAtCorners(ghost, path, positionThreshold);
         }
 
         private void ChangeAnimation()
