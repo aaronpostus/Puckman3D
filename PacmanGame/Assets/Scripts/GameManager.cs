@@ -143,6 +143,7 @@ namespace OttiPostLewis.Lab6
         //  Method called when the player dies
         public void OnPlayerDeath()
         {
+            soundManager.PlaySound("Death");
             if (remainingLives > 0)
             {
                 ResetLevel();
