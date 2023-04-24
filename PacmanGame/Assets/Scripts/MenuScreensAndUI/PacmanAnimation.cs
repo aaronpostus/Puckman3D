@@ -13,7 +13,6 @@ namespace OttiPostLewis.Lab6 {
         private InputAction mousePosition, mouseClick;
         private Transform transform;
         private enum State : int { PacmanCursorFollow = 0, GamemodeSelected = 1 };
-        private GameManager gm = GameManager.Instance;
         private int state, selectedGame;
         private float animationTime;
         // Start is called before the first frame update

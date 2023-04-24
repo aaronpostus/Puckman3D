@@ -7,6 +7,7 @@ namespace OttiPostLewis.Lab6 {
     public class UIController : MonoBehaviour
     {
         private TextMeshProUGUI scoreUI, levelUI, livesUI, imageUI, countdownUIText, countdownUIValue;
+        private GameManager gm;
         private float animationTime = 4f;
         private bool countingDown = true;
         private GameObject countdown, imageObj, countdownNum;
@@ -17,6 +18,7 @@ namespace OttiPostLewis.Lab6 {
         // Start is called before the first frame update
         void Start()
         {
+            this.gm = GameObject.Find("GameManager").GetComponent<GameManager>();
             this.levelUI = GetNestedChildTextMesh(0);
             this.scoreUI = GetNestedChildTextMesh(1);
             this.livesUI = GetNestedChildTextMesh(2);
@@ -43,7 +45,8 @@ namespace OttiPostLewis.Lab6 {
                 }
                 else if(animationTime > 0f){
                     countdownUIText.text = "GO! GO! GO! GO!";
-                    GameManager.Instance.StartLevel();
+
+                    gm.StartLevel();
                     countdownNum.SetActive(false);
                     imageObj.SetActive(false);
                 }

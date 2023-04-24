@@ -15,7 +15,7 @@ namespace OttiPostLewis.Lab6 {
             mouseInput = new MouseInput();
             mouseClick = mouseInput.Mouse.Click;
             mouseClick.Enable();
-            GameManager.Instance = null;
+            Destroy(GameObject.Find("GameManager"));
 
         }
 
