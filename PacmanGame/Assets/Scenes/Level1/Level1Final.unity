@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414726, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pacmanEating: {fileID: 8300000, guid: 7634821e0c6474e58b1aaa1cc574bf34, type: 3}
-  backGroundMusic: {fileID: 8300000, guid: ff6bf3b4553dc4482a3324596d43c2f5, type: 3}
+  backGroundMusic: {fileID: 8300000, guid: 6f23ca6641e75400d89fe6c5c7cccf40, type: 3}
 --- !u!1001 &108921921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4477,7 +4477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d71464d001c83f47adb63458affa842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPortalLocation: {x: 0, y: 0}
+  targetPortalLocation: {x: 8, y: -2.5}
 --- !u!4 &404642793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493874, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
@@ -5498,7 +5498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.479545
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5506,7 +5506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.535
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14557,7 +14557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d71464d001c83f47adb63458affa842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPortalLocation: {x: 0, y: 0}
+  targetPortalLocation: {x: -7.5, y: -2.5}
 --- !u!4 &1402293456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493874, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
@@ -21131,7 +21131,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.10666666
+  m_VoxelSize: 0.11666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 252db32b2cce8ed428d78f12a33cb55a, type: 2}
 --- !u!4 &2002961389 stripped
