@@ -72,7 +72,7 @@ namespace OttiPostLewis.Lab6
 
         private void Update()
         {
-           //if (!canMove) {
+           if (canMove) {
 
                 LockMovement();
 
@@ -102,7 +102,7 @@ namespace OttiPostLewis.Lab6
 
                 playerTransform.rotation = targetRotation;
                 playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
-            //}
+            }
        }
     }
 }

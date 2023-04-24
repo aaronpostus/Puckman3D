@@ -30,7 +30,8 @@ namespace OttiPostLewis.Lab6
         // for infinite mode, this is the total number of levels we have completed
         // (not indicative of the current scene)
         public static int currentLevel = 0;
-
+        private LevelController levelManager = null;
+        private List<Ghost> ghostsInCurrentLevel = new List<Ghost>();
         // singleton instance
         private static GameManager instance = null;
         public static GameManager Instance
@@ -108,6 +109,7 @@ namespace OttiPostLewis.Lab6
 
        public void StartNextLevel() {
             currentLevel++;
+            ghostsInCurrentLevel = new List<Ghost>();
             if(selectedGameMode == (int) Gamemodes.Story) {
                 SceneManager.LoadScene(levels[currentLevel - 1], LoadSceneMode.Single);
             }
@@ -119,11 +121,26 @@ namespace OttiPostLewis.Lab6
         private void InitializeCurrentLevel() {
             Scene scene = SceneManager.GetSceneByName(levels[currentLevel-1]);
             GameObject[] objectsInScene = scene.GetRootGameObjects();
+            PauseLevel();
             foreach(GameObject gameObject in objectsInScene) {
-                if(gameObject.name.Equals("LevelUIPrefab")) {
-                    Debug.Log("Found");
+                if(gameObject.name.Equals("LevelPrefab")) {
+                    this.levelManager = gameObject.GetComponent<LevelController>();
+                    break;
                 }
             }
+        }
+        public void PauseLevel() {
+            FreezePacman(true);
+            FreezeGhosts(true);
+        }
+        // invoked by the UI once the countdown completes.
+        public void StartLevel() {
+            FreezePacman(false);
+            FreezeGhosts(false);
+        }
+        public void ResetGhostAndPacmanPositions() {
+            levelManager.ResetGhostAndPacmanPositions();
+            
         }
         public void FreezePacman(bool shouldFreeze) {
             MovementControl.canMove = !shouldFreeze;
@@ -134,7 +151,7 @@ namespace OttiPostLewis.Lab6
         //  Method to advance when the player beats the level
         public void LevelWon()
         {
-
+            currentGameState = (int) Gamestate.Loading;
            //Load the scene for the new level
 
 
@@ -143,6 +160,7 @@ namespace OttiPostLewis.Lab6
         //  Method called when the player dies
         public void OnPlayerDeath()
         {
+            soundManager.PlaySound("Death");
             if (remainingLives > 0)
             {
                 ResetLevel();
@@ -180,7 +198,7 @@ namespace OttiPostLewis.Lab6
 
         public void Update()
         {
-            if (pellets.Count == 0)
+            if (currentGameState == (int) Gamestate.GamePlay && pellets.Count == 0)
             {
                 LevelWon();
             }

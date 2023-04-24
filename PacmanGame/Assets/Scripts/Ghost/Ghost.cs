@@ -82,7 +82,9 @@ namespace OttiPostLewis.Lab6
             Debug.DrawRay(transform.position, transform.TransformDirection(forward * sightRange), Color.red);
         }
 
-
+        public void ResetGhost() {
+            // add implementation
+        }
     }
 }
 
