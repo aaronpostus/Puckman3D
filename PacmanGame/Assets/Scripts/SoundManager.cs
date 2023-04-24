@@ -20,6 +20,7 @@ namespace OttiPostLewis.Lab6
             bgMusicSource.volume = 0.4f;
             bgMusicSource.loop = true;
             bgMusicSource.clip = backGroundMusic;
+            
 
             sounds.Add("Eat", pacmanEating);
             BackgroundMusic();
