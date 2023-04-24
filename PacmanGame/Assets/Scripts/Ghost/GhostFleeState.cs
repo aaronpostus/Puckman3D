@@ -20,10 +20,9 @@ namespace OttiPostLewis.Lab6
         private float positionThreshold = 0.01f;
         private float newDistance;
         private float currentDistance;
-        private Vector3 pacmanPosition = Vector3.zero; //temporary until pacman's location is public/a property
         private float fleeTime = 6; //equal to pacman's eating state duration
 
-        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination)
+        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination, bool computeInitialDest)
         {
             this.ghost = ghost;
             this.destination = destination;
@@ -56,7 +55,7 @@ namespace OttiPostLewis.Lab6
                 {
                     randomPoint = ghost.transform.position + Random.insideUnitSphere * range;
                     NavMesh.SamplePosition(randomPoint, out NavMeshHit hit, range, NavMesh.AllAreas);
-                    newDistance = Vector3.Distance(hit.position, pacmanPosition);
+                    newDistance = Vector3.Distance(hit.position, MovementControl.playerTransform.position);
                     if (newDistance > currentDistance)
                     {
                         currentDistance = newDistance;

@@ -20,7 +20,7 @@ namespace OttiPostLewis.Lab6
         private float pinkyLeaveTime = 6f;
         private float inkyLeaveTime = 9f;
 
-        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination)
+        public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination, bool computeInitialDest)
         {
             this.ghost = ghost;
             this.agent = agent;

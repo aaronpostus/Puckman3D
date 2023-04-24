@@ -14,6 +14,7 @@ namespace OttiPostLewis.Lab6
         public GhostExitHomeState exitHomeState = new GhostExitHomeState();
         public static bool canMove = false;
         public static float multiplier = 1;
+        public bool computeInitialDest = true;
 
         [SerializeField] private NavMeshAgent agent;
 
@@ -33,7 +34,7 @@ namespace OttiPostLewis.Lab6
         {
             if (canMove)
             {
-                currentState = currentState.DoState(this, agent, destination);
+                currentState = currentState.DoState(this, agent, destination, computeInitialDest);
                 UpdateSight();
                 DrawRay();
                 CheckForPacman();
@@ -47,7 +48,6 @@ namespace OttiPostLewis.Lab6
             {
                 currentState = returnHomeState;
             }
-            Debug.Log("hitting something");
         }
 
         private void UpdateSight()
@@ -65,10 +65,10 @@ namespace OttiPostLewis.Lab6
             //else if
             if (Physics.Raycast(sight, out RaycastHit hit, sightRange))
             {
-                //Debug.Log("ghost sees something");
-                if (hit.collider.CompareTag("Player"))
+                //cannot enter chase state until it has left home
+                if (hit.collider.CompareTag("Player") && currentState != exitHomeState)
                 {
-                    Debug.Log("Ghost sees pacman");
+                    //Debug.Log("Ghost sees pacman");
                     //set destination to pacman's current location
                     destination = hit.transform.position;
                     currentState = chaseState;
@@ -81,6 +81,7 @@ namespace OttiPostLewis.Lab6
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(forward * sightRange), Color.red);
         }
+
 
     }
 }
