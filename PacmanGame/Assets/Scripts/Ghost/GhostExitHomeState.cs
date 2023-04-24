@@ -29,6 +29,7 @@ namespace OttiPostLewis.Lab6
             if (Mathf.Abs(ghost.transform.position.x - this.destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - this.destination.z) < positionThreshold)
             {
                 computeDestination = true;
+                ghost.computeInitialDest = true;
                 return ghost.wanderState;
             }
             return ghost.exitHomeState;
@@ -51,7 +52,6 @@ namespace OttiPostLewis.Lab6
 
         private void ChangeAnimation()
         {
-            Debug.Log("changing animation");
             ghost.transform.GetChild(0).gameObject.SetActive(true);
             ghost.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(true);
             ghost.transform.GetChild(1).gameObject.SetActive(false);
