@@ -93,6 +93,6 @@ namespace OttiPostLewis.Lab6
 
   //adjust speeds for each level
 
-  //make ghosts able to move through each other
+  //ghost reset
 
   //test
