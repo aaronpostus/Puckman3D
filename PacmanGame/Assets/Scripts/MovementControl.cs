@@ -11,7 +11,7 @@ namespace OttiPostLewis.Lab6
         private InputAction moveAction;
         float playerSpeed = 4f;
         float raySize;
-        private Transform playerTransform;
+        public static Transform playerTransform;
         private Vector3 forwardDirection, rightDirection, leftDirection, backwardDirection;
         private bool canMoveForward, canMoveBackward, canMoveRight, canMoveLeft;
         Quaternion targetRotation;

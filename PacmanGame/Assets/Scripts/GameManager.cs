@@ -55,7 +55,6 @@ namespace OttiPostLewis.Lab6
         }
         private void Start()
         {
-
             playerScore = 0;
             remainingLives = 4;
             inputScheme = new PacmanInputs();
@@ -96,7 +95,6 @@ namespace OttiPostLewis.Lab6
         public void ConsumeGhost()
         {
             playerScore += (200 * ghostMultiplier);
-
 
         }
 
