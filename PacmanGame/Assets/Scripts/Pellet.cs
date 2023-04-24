@@ -5,23 +5,21 @@ namespace OttiPostLewis.Lab6
 {
     public class Pellet : MonoBehaviour
     {
-        public List<GameObject> pellets;
-
-        public GameManager gameManager;
-
-   
+        [SerializeField] bool superPellet;
+        private GameManager gameManager;
         void Start()
         {
             gameManager = FindObjectOfType<GameManager>();
-
-            gameManager.AddPellet(gameObject);
-
         }
 
         private void OnTriggerEnter(Collider other)
         {
+            if(superPellet) {
+                gameManager.ConsumePowerPellet(gameObject);
+            } else {
+                gameManager.ConsumePellet(gameObject);
+            }
 
-            gameManager.ConsumePellet(gameObject);
             Destroy(gameObject);
 
 
