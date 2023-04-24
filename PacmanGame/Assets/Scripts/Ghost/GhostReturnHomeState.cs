@@ -23,7 +23,7 @@ namespace OttiPostLewis.Lab6
             agent.speed = this.speed * Ghost.multiplier;
             ReturnHome();
 
-            if (Mathf.Abs(ghost.transform.position.x - destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - destination.z) < positionThreshold)
+            if (Mathf.Abs(ghost.transform.position.x - this.destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - this.destination.z) < positionThreshold)
             {
                 computeDestination = true;
                 return ghost.exitHomeState;

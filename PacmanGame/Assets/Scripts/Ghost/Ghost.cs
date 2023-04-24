@@ -65,8 +65,8 @@ namespace OttiPostLewis.Lab6
             //else if
             if (Physics.Raycast(sight, out RaycastHit hit, sightRange))
             {
-                //cannot enter chase state until it has left home
-                if (hit.collider.CompareTag("Player") && currentState != exitHomeState)
+                //cannot enter chase state until it has left/returned home
+                if (hit.collider.CompareTag("Player") && currentState != exitHomeState && currentState != returnHomeState)
                 {
                     //Debug.Log("Ghost sees pacman");
                     //set destination to pacman's current location
