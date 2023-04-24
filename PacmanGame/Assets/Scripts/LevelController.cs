@@ -36,12 +36,20 @@ namespace OttiPostLewis.Lab6 {
             GameManager.Instance.PauseLevel();
             GameManager.Instance.ResetGhostAndPacmanPositions();
         }
-        public Vector2 GetStartingPacmanLocation() {
+        public void ResetGhostAndPacmanPositions() {
+            MovementControl.playerTransform.position = GetStartingPacmanLocation();
+            foreach(Ghost ghost in ghosts) {
+                ghost.ResetGhost();
+            }
+        }
+        private Vector3 GetStartingPacmanLocation() {
+            float y = MovementControl.playerTransform.position.y;
             if(GameManager.selectedGameMode == (int)GameManager.Gamemodes.Story) {
-                return pacmanSpawnStoryMode;
+                return new Vector3(pacmanSpawnStoryMode.x, y, pacmanSpawnStoryMode.y);
             }
             else {
-                return infiniteModeSpawnPoints[Random.Range(0, infiniteModeSpawnPoints.Count)];
+                Vector2 pos = infiniteModeSpawnPoints[Random.Range(0, infiniteModeSpawnPoints.Count)];
+                return new Vector3(pos.x, y, pos.y);
             }
         }
     }
