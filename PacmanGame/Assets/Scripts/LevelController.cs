@@ -7,8 +7,9 @@ namespace OttiPostLewis.Lab6 {
     {
         [Header("Cameras")]
         [SerializeField] Camera isometricCamera, topDownCamera, mixedCamera;
-        [SerializeField] Vector2 pacmanSpawnStoryMode;
-        [SerializeField] List<Vector2> infiniteModeSpawnPoints;
+        [SerializeField] public List<Ghost> ghosts;
+        [SerializeField] public Vector2 pacmanSpawnStoryMode;
+        [SerializeField] public List<Vector2> infiniteModeSpawnPoints;
         private List<Camera> cameras = new List<Camera>();
         // Start is called before the first frame update
         void Start()
@@ -32,9 +33,8 @@ namespace OttiPostLewis.Lab6 {
                     mixedCamera.enabled = true;
                     break;
             }
-            Vector2 pacmanLoc = GetStartingPacmanLocation();
-            GameObject pacman = GameObject.Find("PacMan");
-            pacman.transform.position = new Vector3(pacmanLoc.x, pacman.transform.position.y, pacmanLoc.y);
+            GameManager.Instance.PauseLevel();
+            GameManager.Instance.ResetGhostAndPacmanPositions();
         }
         public Vector2 GetStartingPacmanLocation() {
             if(GameManager.selectedGameMode == (int)GameManager.Gamemodes.Story) {

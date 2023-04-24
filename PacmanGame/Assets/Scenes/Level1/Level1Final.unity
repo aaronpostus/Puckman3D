@@ -1979,6 +1979,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
+--- !u!114 &189195681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 528617381608157476, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
+  m_PrefabInstance: {fileID: 2503031078571041592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e464d7aa55709e6419f18bb6365aaeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &195125487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493874, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
@@ -3273,6 +3284,26 @@ PrefabInstance:
       propertyPath: isometricCamera
       value: 
       objectReference: {fileID: 1696114715}
+    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
+      propertyPath: ghosts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
+      propertyPath: ghosts.Array.data[0]
+      value: 
+      objectReference: {fileID: 2077990350}
+    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
+      propertyPath: ghosts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1166982405}
+    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
+      propertyPath: ghosts.Array.data[2]
+      value: 
+      objectReference: {fileID: 189195681}
+    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
+      propertyPath: ghosts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1219097139}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: pacmanSpawnStoryMode.x
       value: -4.439
@@ -12269,6 +12300,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 429014, guid: c7eb90ce76520bf40894bc2e09d75a7a, type: 3}
   m_PrefabInstance: {fileID: 1163214922}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1166982405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 742833050451021880, guid: 6c44563c0585a664e8035c4a508d12c6, type: 3}
+  m_PrefabInstance: {fileID: 1746353755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e464d7aa55709e6419f18bb6365aaeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1171175266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12968,6 +13010,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7eb90ce76520bf40894bc2e09d75a7a, type: 3}
+--- !u!114 &1219097139 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6530187330187970259, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
+  m_PrefabInstance: {fileID: 1446551155875056719}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e464d7aa55709e6419f18bb6365aaeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1225278512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493874, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
@@ -21915,6 +21968,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
+--- !u!114 &2077990350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7099188925189576688, guid: c553982e436766b47befe22605a33f38, type: 3}
+  m_PrefabInstance: {fileID: 9210399757351146547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e464d7aa55709e6419f18bb6365aaeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2080603888
 PrefabInstance:
   m_ObjectHideFlags: 0
