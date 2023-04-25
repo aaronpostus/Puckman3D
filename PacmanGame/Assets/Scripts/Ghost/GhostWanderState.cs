@@ -17,7 +17,7 @@ namespace OttiPostLewis.Lab6
         private bool computeInitialDest;
         private float positionThreshold = 0.01f;
         private float range = 100f;
-        private float speed = 5f;
+        private float speed = 3f;
 
         public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination, bool computeInitialDest)
         {

@@ -9,7 +9,7 @@ namespace OttiPostLewis.Lab6
 
     public class GhostFleeState : IGhostState
     {
-        private int speed = 3; //speed should be less than pacman's
+        private float speed = 2.5f; //speed should be less than pacman's
         private float timer = 0;
         private NavMeshAgent agent;
         private Vector3 randomPoint;
