@@ -36,6 +36,7 @@ namespace OttiPostLewis.Lab6
             {
                 timer = 0;
                 computeDestination = true;
+                RevertAnimation();
                 return ghost.wanderState;
             }
             return ghost.fleeState;
@@ -75,6 +76,12 @@ namespace OttiPostLewis.Lab6
         {
             ghost.transform.GetChild(0).gameObject.SetActive(false);
             ghost.transform.GetChild(1).gameObject.SetActive(true);
+        }
+
+        private void RevertAnimation()
+        {
+            ghost.transform.GetChild(0).gameObject.SetActive(true);
+            ghost.transform.GetChild(1).gameObject.SetActive(false);
         }
 
     }
