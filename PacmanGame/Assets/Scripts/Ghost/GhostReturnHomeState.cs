@@ -9,7 +9,7 @@ namespace OttiPostLewis.Lab6
 
     public class GhostReturnHomeState : IGhostState
     {
-        private int speed = 4;
+        private float speed = 5f;
         private NavMeshAgent agent;
         private Ghost ghost;
         private Vector3 destination;
