@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
+using Debug = UnityEngine.Debug;
 
 namespace OttiPostLewis.Lab6
 {
@@ -65,6 +68,26 @@ namespace OttiPostLewis.Lab6
                 }
             }
         }
+
+        public void CallFlee()
+        {
+            currentState = PacmanState.Chase;
+            float delay = 6.0f;
+            StartCoroutine(ChangeStateAfterDelay(PacmanState.Flee, delay));
+        }
+
+        private IEnumerator ChangeStateAfterDelay(PacmanState newState, float delay)
+        {
+            Debug.Log("Starting coroutine");
+
+            yield return new WaitForSeconds(delay);
+
+            Debug.Log("Coroutine finished");
+
+            currentState = newState;
+        }
+
+
 
         private void SetDirections()
         {
