@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace OttiPostLewis.Lab6 {
+    // authored by aaron post
     public class BerrySpin : MonoBehaviour
     {
         [SerializeField] GameObject berry;

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 
 namespace OttiPostLewis.Lab6 {
+        // authored by aaron post
     public class UIController : MonoBehaviour
     {
         private TextMeshProUGUI scoreUI, levelUI, livesUI, imageUI, countdownUIText, countdownUIValue;

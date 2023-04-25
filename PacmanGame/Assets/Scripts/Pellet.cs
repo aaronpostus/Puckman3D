@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 namespace OttiPostLewis.Lab6
 {
+    // authored by alex otti
     public class Pellet : MonoBehaviour
     {
         [SerializeField] bool superPellet;

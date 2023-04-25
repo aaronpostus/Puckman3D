@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace OttiPostLewis.Lab6 {
+        // authored by aaron post
     public class PacmanAnimation : MonoBehaviour
     {
         [SerializeField] float maxY, middleY, minY, speed, eatSpeed, endlessMinX, storyMinX;
