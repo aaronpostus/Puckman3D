@@ -61,6 +61,7 @@ namespace OttiPostLewis.Lab6
         public void ConsumePowerPellet(GameObject gameObject)
         {
             playerScore += 10;
+            soundManager.PlaySound("EatSuperPellet");
             //Chase Ghosts
 
         }
