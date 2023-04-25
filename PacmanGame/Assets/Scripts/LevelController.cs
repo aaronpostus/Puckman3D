@@ -44,11 +44,21 @@ namespace OttiPostLewis.Lab6 {
         void GatherPelletsInLevel() {
             this.pelletTransform = GameObject.Find("Pellets").transform;
         }
+        public void ShowGhosts(bool shouldShow) {
+            foreach(Ghost ghost in ghosts) {
+                ghost.gameObject.SetActive(shouldShow);
+            }
+        }
+        public void ShowPacman(bool shouldShow) {
+            MovementControl.playerObj.gameObject.SetActive(shouldShow);
+        }
         public void ResetGhostAndPacmanPositions() {
             MovementControl.playerTransform.position = GetStartingPacmanLocation();
             foreach(Ghost ghost in ghosts) {
                 ghost.ResetGhost();
+                ghost.gameObject.SetActive(true);
             }
+            MovementControl.playerObj.SetActive(true);
         }
         public int NumberOfPelletsInLevel() {
             return pelletTransform.childCount;

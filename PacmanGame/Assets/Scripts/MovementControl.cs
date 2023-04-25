@@ -6,10 +6,11 @@ namespace OttiPostLewis.Lab6
     public class MovementControl : MonoBehaviour
     {
 
-        [SerializeField] private GameObject playerToMove;
+        [SerializeField] public GameObject playerToMove;
         public static bool canMove = false;
         public LayerMask layerMask;
         private InputAction moveAction;
+        public static GameObject playerObj;
         float playerSpeed = 4f;
         float raySize;
         public static Transform playerTransform;
@@ -24,6 +25,7 @@ namespace OttiPostLewis.Lab6
         
         }
         void Awake() {
+            playerObj = playerToMove;
             playerTransform = playerToMove.transform;
         }
         private void Start()
