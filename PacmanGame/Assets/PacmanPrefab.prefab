@@ -146,7 +146,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.6
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &7145708307692725742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +160,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerToMove: {fileID: 44291359856871902}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &44291359856973310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400020, guid: 1715985f1ff8a9e45b60ea3ed8b6385c, type: 3}
