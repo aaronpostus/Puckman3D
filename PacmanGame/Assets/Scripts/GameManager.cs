@@ -31,7 +31,7 @@ namespace OttiPostLewis.Lab6
 
             levels.Add("Level1Final");
             levels.Add("Level2");
-            levels.Add("Level2");
+            levels.Add("Level3");
 
         }
 
