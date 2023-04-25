@@ -7,15 +7,23 @@ namespace OttiPostLewis.Lab6
     {
         [SerializeField] bool superPellet;
         private GameManager gameManager;
+        private GameObject pacmanObject;
+        MovementControl movementControl;
         void Start()
         {
             gameManager = FindObjectOfType<GameManager>();
+            
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if(superPellet) {
+
                 gameManager.ConsumePowerPellet(gameObject);
+
+                pacmanObject = GameObject.Find("PacmanPrefab/PacMan");
+                movementControl = pacmanObject.GetComponent<MovementControl>();
+                movementControl.CallFlee();
 
             } else {
                 gameManager.ConsumePellet(gameObject);
