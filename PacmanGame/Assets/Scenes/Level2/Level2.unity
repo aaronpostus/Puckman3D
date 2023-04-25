@@ -10348,7 +10348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.74
+      value: -2.415
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10356,7 +10356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.53
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14378,7 +14378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: pacmanSpawnStoryMode.y
-      value: -1.633
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.size
@@ -14390,7 +14390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.data[0].y
-      value: -1.633
+      value: -2.6
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.data[1].x
