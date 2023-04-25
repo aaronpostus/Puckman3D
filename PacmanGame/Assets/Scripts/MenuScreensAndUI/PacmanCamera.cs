@@ -10,7 +10,7 @@ namespace OttiPostLewis.Lab6 {
         [SerializeField] float maxY, medY, minY, middleY1, middleY2, speed, eatSpeed, isometricX, topdownX, mixedX;
         [SerializeField] GameObject pacman;
         private MouseInput mouseInput;
-        private GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        private GameManager gm;
         private InputAction mousePosition, mouseClick;
         private Transform transform;
         private enum State : int { PacmanCursorFollow = 0, CameraSelected = 1, AnimationComplete = 2 };
@@ -19,6 +19,7 @@ namespace OttiPostLewis.Lab6 {
         // Start is called before the first frame update
         void Start()
         {
+            gm = GameObject.Find("GameManager").GetComponent<GameManager>();
             mouseInput = new MouseInput();
             mousePosition = mouseInput.Mouse.Position;
             mouseClick = mouseInput.Mouse.Click;
@@ -89,8 +90,6 @@ namespace OttiPostLewis.Lab6 {
                     GameManager.selectedCameraMode = selectedCamera;
                     state = (int) State.AnimationComplete;
                     gm.StartNextLevel();
-
-
                 } else {
                     if(selectedCamera == (int) GameManager.CameraModes.Isometric && transform.position.x > isometricX) {
                         transform.position = new Vector3(transform.position.x - (eatSpeed * Time.deltaTime), transform.position.y, transform.position.z);

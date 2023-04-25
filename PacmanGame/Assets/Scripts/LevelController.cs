@@ -36,6 +36,7 @@ namespace OttiPostLewis.Lab6 {
                     break;
             }
             gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+            GameManager.levelManager = this;
             gm.PauseLevel();
             ResetGhostAndPacmanPositions();
             GatherPelletsInLevel();

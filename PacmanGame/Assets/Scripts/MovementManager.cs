@@ -10,7 +10,7 @@ namespace OttiPostLewis.Lab6
     public class MovementManager : MonoBehaviour
     {
 
-        private MovementControl movementController;
+        [SerializeField] MovementControl movementController;
         private PacmanInputs inputScheme;
 
         private void Awake()

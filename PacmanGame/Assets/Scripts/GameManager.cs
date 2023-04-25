@@ -25,7 +25,7 @@ namespace OttiPostLewis.Lab6
         // for infinite mode, this is the total number of levels we have completed
         // (not indicative of the current scene)
         public static int currentLevel = 0;
-        private static LevelController levelManager = null;
+        public static LevelController levelManager = null;
         public GameManager() {
             levels = new List<string>();
 
@@ -84,9 +84,10 @@ namespace OttiPostLewis.Lab6
             InitializeCurrentLevel();
        }
         private void InitializeCurrentLevel() {
-            GameObject levelPrefab = GameObject.Find("LevelPrefab");
-            GameManager.levelManager = levelPrefab.GetComponent<LevelController>();
-            Debug.Log("added levelcontroller");
+            //GameObject levelPrefab = GameObject.Find("LevelPrefab");
+            //Debug.Log(levelPrefab != null);
+            //GameManager.levelManager = levelPrefab.GetComponent<LevelController>();
+            //Debug.Log("added levelcontroller");
         }
         public void PauseLevel() {
             currentGameState = (int) Gamestate.Loading;
