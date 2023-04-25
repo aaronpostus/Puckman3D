@@ -21,7 +21,7 @@ namespace OttiPostLewis.Lab6
         [SerializeField] private NavMeshAgent agent;
 
         private IGhostState currentState;
-        private float sightRange = 10f; //may need to change
+        private float sightRange = 15f;
         private Vector3 forward;
         private Vector3 destination;
         private Ray sight;
@@ -99,10 +99,3 @@ namespace OttiPostLewis.Lab6
         }
     }
 }
-
-
-//TODO:
-
-  //adjust speeds for each level
-
-  //test

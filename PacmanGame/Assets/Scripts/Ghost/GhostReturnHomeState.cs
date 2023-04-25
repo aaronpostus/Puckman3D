@@ -25,7 +25,6 @@ namespace OttiPostLewis.Lab6
 
             if (Mathf.Abs(ghost.transform.position.x - this.destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - this.destination.z) < positionThreshold)
             {
-                Debug.Log("reached home");
                 ghost.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 computeDestination = true;
                 return ghost.exitHomeState;
@@ -35,7 +34,6 @@ namespace OttiPostLewis.Lab6
 
         private void ReturnHome()
         {
-            Debug.Log("return home entered");
             //only set destination once
             if (computeDestination)
             {

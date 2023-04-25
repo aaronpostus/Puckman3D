@@ -56,7 +56,7 @@ namespace OttiPostLewis.Lab6
             ghost.transform.GetChild(1).gameObject.SetActive(false);
         }
 
-        //only staggers at the start of the level so timer is not reset
+        //only staggers at the start of the level so timer is not reset (unless level is reset)
         private void Stagger()
         {
             if (ghost.name == "Blinky")
