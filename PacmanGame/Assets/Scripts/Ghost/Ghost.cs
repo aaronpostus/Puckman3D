@@ -66,15 +66,15 @@ namespace OttiPostLewis.Lab6
             //Note: "Player" tag = pacman
 
             //if pacman's current state == ghost-eating pacman, flee
-            if (MovementControl.currentState == MovementControl.PacmanState.Chase)
+            if (MovementControl.currentState == MovementControl.PacmanState.Chase && currentState == wanderState)
             {
                 currentState = fleeState;
             }
             
             else if (Physics.Raycast(sight, out RaycastHit hit, sightRange))
             {
-                //cannot enter chase state until it has left/returned home
-                if (hit.collider.CompareTag("Player") && currentState != exitHomeState && currentState != returnHomeState)
+                //cannot enter chase state unless it is wandering
+                if (hit.collider.CompareTag("Player") && currentState == wanderState)
                 {
                     //Debug.Log("Ghost sees pacman");
                     //set destination to pacman's current location
@@ -95,6 +95,7 @@ namespace OttiPostLewis.Lab6
             transform.rotation = initialRotation;
             initialExitTimer = 0;
             currentState = exitHomeState;
+            computeInitialDest = true;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace OttiPostLewis.Lab6
 
     public class GhostFleeState : IGhostState
     {
-        private float speed = 2.5f; //speed should be less than pacman's
+        private float speed = 3.5f; //speed should be less than pacman's
         private NavMeshAgent agent;
         private Vector3 randomPoint;
         private Ghost ghost;
@@ -31,7 +31,9 @@ namespace OttiPostLewis.Lab6
             //when pacman changes back to normal state, revert animation and begin wandering
             if (MovementControl.currentState == MovementControl.PacmanState.Flee)
             {
+                Debug.Log("pacman is normal now");
                 computeDestination = true;
+                ghost.computeInitialDest = true;
                 RevertAnimation();
                 return ghost.wanderState;
             }
