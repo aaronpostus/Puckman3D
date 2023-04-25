@@ -19,6 +19,7 @@ namespace OttiPostLewis.Lab6 {
         void Start()
         {
             this.gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+            GameManager.uIController = this;
             this.levelUI = GetNestedChildTextMesh(0);
             this.scoreUI = GetNestedChildTextMesh(1);
             this.livesUI = GetNestedChildTextMesh(2);
@@ -33,9 +34,11 @@ namespace OttiPostLewis.Lab6 {
             this.countdownNum = countdown.transform.GetChild(2).gameObject;
             this.countdownUIValue = countdownNum.GetComponent<TextMeshProUGUI>();
         }
-        void PacmanDeathAnimation() {
+        public void PacmanDeathAnimation() {
+                                countdown.SetActive(true);
             animationTime = 6f;
             countingDown = true;
+            countdownUIText.text = "";
             deathObj.SetActive(true);
             pacmanDeathAnimation = true;
         }
@@ -49,8 +52,12 @@ namespace OttiPostLewis.Lab6 {
             if(countingDown) {
                 animationTime -= Time.deltaTime;
                 if(pacmanDeathAnimation && animationTime < 4f) {
+                    countdownUIText.text = "Respawning: ";
                     countdownNum.SetActive(true);
                     imageObj.SetActive(true);
+
+                    gm.ResetGhostAndPacmanPositions();
+                    pacmanDeathAnimation = false;
                 }
                 if(animationTime > 1f) {
                     countdownUIValue.text = Mathf.Ceil(animationTime - 1) + "";
@@ -61,7 +68,8 @@ namespace OttiPostLewis.Lab6 {
                     countdownNum.SetActive(false);
                     imageObj.SetActive(false);
                     deathObj.SetActive(false);
-                    pacmanDeathAnimation = false;
+                    GameManager.levelManager.ShowGhosts(true);
+                    GameManager.levelManager.ShowPacman(true);
                 }
                 else {
                     countdown.SetActive(false);

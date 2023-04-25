@@ -7,13 +7,13 @@ namespace OttiPostLewis.Lab6
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] GameObject UIPrefab;
          public List<string> levels;
         public static int playerScore;
         public static int remainingLives;
         [SerializeField] private SoundManager soundManager;
 
         private int ghostMultiplier;
+        public static UIController uIController;
 
         public enum CameraModes : int { Isometric = 0, TopDown = 1, Mixed = 2 };
         public enum Gamemodes : int { Story = 0, Endless = 1 };
@@ -129,6 +129,7 @@ namespace OttiPostLewis.Lab6
             PauseLevel();
             if (remainingLives > 0)
             {
+                uIController.PacmanDeathAnimation();
                 currentGameState = (int) Gamestate.Loading;
                 levelManager.ShowGhosts(false);
                 ResetLevel();
