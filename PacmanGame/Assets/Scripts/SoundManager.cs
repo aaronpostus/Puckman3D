@@ -26,10 +26,11 @@ namespace OttiPostLewis.Lab6
             sounds.Add("EatSuperPellet", pacmanEatSuperPellet);
             BackgroundMusic();
         }
-
+        //This method plays a sound effect based on the sound ID
         public void PlaySound(string soundID)
         {
             AudioClip currentSound;
+            //Checl of spimd exists in dictionary
             if (sounds.TryGetValue(soundID, out currentSound))
             {
                 fxSource.clip = currentSound;
@@ -38,7 +39,7 @@ namespace OttiPostLewis.Lab6
         }
 
 
-
+        //This method toggles the background music on and off
         public void BackgroundMusic()
         {
             
