@@ -23,10 +23,11 @@ namespace OttiPostLewis.Lab6
             moveAction.Enable();
         
         }
-
+        void Awake() {
+            playerTransform = playerToMove.transform;
+        }
         private void Start()
         {
-            playerTransform = playerToMove.transform;
             raySize = 0.45f;
             targetRotation = Quaternion.identity;
             SetDirections();

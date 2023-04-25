@@ -11,6 +11,8 @@ namespace OttiPostLewis.Lab6 {
         [SerializeField] public Vector2 pacmanSpawnStoryMode;
         [SerializeField] public List<Vector2> infiniteModeSpawnPoints;
         private List<Camera> cameras = new List<Camera>();
+        private GameManager gm;
+        private Transform pelletTransform;
         // Start is called before the first frame update
         void Start()
         {
@@ -33,14 +35,23 @@ namespace OttiPostLewis.Lab6 {
                     mixedCamera.enabled = true;
                     break;
             }
-            GameManager.Instance.PauseLevel();
-            GameManager.Instance.ResetGhostAndPacmanPositions();
+            gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+            GameManager.levelManager = this;
+            gm.PauseLevel();
+            ResetGhostAndPacmanPositions();
+            GatherPelletsInLevel();
+        }
+        void GatherPelletsInLevel() {
+            this.pelletTransform = GameObject.Find("Pellets").transform;
         }
         public void ResetGhostAndPacmanPositions() {
             MovementControl.playerTransform.position = GetStartingPacmanLocation();
             foreach(Ghost ghost in ghosts) {
                 ghost.ResetGhost();
             }
+        }
+        public int NumberOfPelletsInLevel() {
+            return pelletTransform.childCount;
         }
         private Vector3 GetStartingPacmanLocation() {
             float y = MovementControl.playerTransform.position.y;
