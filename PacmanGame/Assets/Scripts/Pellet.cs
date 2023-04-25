@@ -22,7 +22,6 @@ namespace OttiPostLewis.Lab6
 
             Destroy(gameObject);
 
-
         }
 
         // Update is called once per frame

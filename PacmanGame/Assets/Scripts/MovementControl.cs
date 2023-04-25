@@ -15,7 +15,16 @@ namespace OttiPostLewis.Lab6
         public static Transform playerTransform;
         private Vector3 forwardDirection, rightDirection, leftDirection, backwardDirection;
         private bool canMoveForward, canMoveBackward, canMoveRight, canMoveLeft;
+        private GameManager gm;
+
         Quaternion targetRotation;
+
+        public enum PacmanState
+        {
+            Flee,
+            Chase
+        }
+        public static PacmanState currentState;
 
         public void Initialize(InputAction moveAction)
         {
@@ -30,17 +39,28 @@ namespace OttiPostLewis.Lab6
         {
             raySize = 0.45f;
             targetRotation = Quaternion.identity;
+            currentState = PacmanState.Flee;
             SetDirections();
-    
-            // Calculate direction vectors
-      
+            gm = GameObject.Find("GameManager").GetComponent<GameManager>(); 
+
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (layerMask == (layerMask | (1 << other.gameObject.layer)))
+            if ((other.gameObject.name == "Blinky") || (other.gameObject.name == "Pinky") || (other.gameObject.name == "Inky") || (other.gameObject.name == "Clyde"))
             {
-                // Do something with the collider...
+                switch (currentState)
+                {
+                    case PacmanState.Flee:
+                        gm.Die();
+                        Debug.Log("COLLISION");
+
+                        break;
+                    case PacmanState.Chase:
+
+                        break;
+
+                }
             }
         }
 
