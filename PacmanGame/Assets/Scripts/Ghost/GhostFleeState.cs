@@ -40,6 +40,7 @@ namespace OttiPostLewis.Lab6
 
         private void Flee()
         {
+            Debug.Log("fleeing");
             //only set destination once
             if ((Mathf.Abs(ghost.transform.position.x - destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - destination.z) < positionThreshold) || computeDestination)
             {

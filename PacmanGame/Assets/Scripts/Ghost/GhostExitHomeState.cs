@@ -36,6 +36,8 @@ namespace OttiPostLewis.Lab6
 
         private void ExitHome()
         {
+            Debug.Log("exit home check");
+            ChangeAnimation();
             ghost.initialExitTimer += Time.deltaTime;
 
             if (computeDestination)

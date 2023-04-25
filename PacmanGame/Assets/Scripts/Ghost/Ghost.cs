@@ -66,7 +66,7 @@ namespace OttiPostLewis.Lab6
             //Note: "Player" tag = pacman
 
             //if pacman's current state == ghost-eating pacman, flee
-            if (MovementControl.currentState == MovementControl.PacmanState.Chase)
+            if (MovementControl.currentState == MovementControl.PacmanState.Chase && currentState != returnHomeState)
             {
                 currentState = fleeState;
             }
