@@ -8,7 +8,7 @@ namespace OttiPostLewis.Lab6
     {
         private Dictionary<string, AudioClip> sounds = new Dictionary<string, AudioClip>();
         private AudioSource bgMusicSource, fxSource;
-        [SerializeField] private AudioClip pacmanEating, backGroundMusic, pacmanDeath, pacmanEatGhost;
+        [SerializeField] private AudioClip pacmanEatPellet, backGroundMusic, pacmanDeath, pacmanEatSuperPellet;
         private bool bgMusicIsPlaying = false;
 
         void Start()
@@ -16,14 +16,14 @@ namespace OttiPostLewis.Lab6
             bgMusicSource = gameObject.AddComponent<AudioSource>();
             fxSource = gameObject.AddComponent<AudioSource>();
 
-            bgMusicSource.volume = 0.3f;
+            bgMusicSource.volume = 0.2f;
             bgMusicSource.loop = true;
             bgMusicSource.clip = backGroundMusic;
             
 
-            sounds.Add("Eat", pacmanEating);
+            sounds.Add("Eat", pacmanEatPellet);
             sounds.Add("Death", pacmanDeath);
-            sounds.Add("EatGhost", pacmanEatGhost);
+            sounds.Add("EatSuperPellet", pacmanEatSuperPellet);
             BackgroundMusic();
         }
 

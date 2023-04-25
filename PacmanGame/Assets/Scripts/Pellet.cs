@@ -16,6 +16,7 @@ namespace OttiPostLewis.Lab6
         {
             if(superPellet) {
                 gameManager.ConsumePowerPellet(gameObject);
+
             } else {
                 gameManager.ConsumePellet(gameObject);
             }
