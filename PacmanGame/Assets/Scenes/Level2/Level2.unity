@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3668,6 +3668,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528617381608157477, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 528617381608157479, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3890,7 +3894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d71464d001c83f47adb63458affa842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPortalLocation: {x: -4.6, y: -8.2}
+  targetPortalLocation: {x: -5.4, y: -17.55}
 --- !u!54 &398668617
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6528,6 +6532,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -17.068
       objectReference: {fileID: 0}
+    - target: {fileID: 7099188925189576691, guid: c553982e436766b47befe22605a33f38, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7417030631928762817, guid: c553982e436766b47befe22605a33f38, type: 3}
       propertyPath: m_Name
       value: Pinky
@@ -8544,7 +8552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6530187330187970256, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9620003
+      value: -1.85
       objectReference: {fileID: 0}
     - target: {fileID: 6530187330187970256, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8552,7 +8560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6530187330187970256, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.338
+      value: -16.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6530187330187970258, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
@@ -10336,7 +10348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10344,7 +10356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.645
+      value: -4.53
       objectReference: {fileID: 0}
     - target: {fileID: 5316048575334981818, guid: b2c09e7099584442cba88015a2976011, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11361,6 +11373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clyde
       objectReference: {fileID: 0}
+    - target: {fileID: 742833050451021883, guid: 6c44563c0585a664e8035c4a508d12c6, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 742833050451021885, guid: 6c44563c0585a664e8035c4a508d12c6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -11920,7 +11936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d71464d001c83f47adb63458affa842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPortalLocation: {x: 4.5, y: 5.1}
+  targetPortalLocation: {x: 3.6, y: -3.5}
 --- !u!54 &1402100611
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14366,31 +14382,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.data[0].x
-      value: -7.4
+      value: -2.415
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.data[0].y
-      value: -8.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
-      propertyPath: infiniteModeSpawnPoints.Array.data[1].x
-      value: 2.585
-      objectReference: {fileID: 0}
-    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
-      propertyPath: infiniteModeSpawnPoints.Array.data[1].y
       value: -1.633
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
+      propertyPath: infiniteModeSpawnPoints.Array.data[1].x
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
+      propertyPath: infiniteModeSpawnPoints.Array.data[1].y
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.data[2].x
-      value: -6.508
+      value: -1.74
       objectReference: {fileID: 0}
     - target: {fileID: 1976298701553848382, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: infiniteModeSpawnPoints.Array.data[2].y
-      value: 0.318
+      value: -4.53
       objectReference: {fileID: 0}
     - target: {fileID: 2861128170698438303, guid: ed949162a91018241b5a3a916f18f93d, type: 3}
       propertyPath: m_Name
@@ -15362,7 +15378,7 @@ GameObject:
   - component: {fileID: 1786117647}
   - component: {fileID: 1786117646}
   - component: {fileID: 1786117649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
