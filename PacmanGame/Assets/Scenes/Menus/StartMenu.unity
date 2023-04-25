@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571337, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -478,6 +478,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8642820182263400478, guid: d8fff41d674b85e4c90546758d169f3c, type: 3}
+      propertyPath: pacmanDeath
+      value: 
+      objectReference: {fileID: 8300000, guid: cecbba7a41d6f46f6ada13ea0765c27f, type: 3}
+    - target: {fileID: 8642820182263400478, guid: d8fff41d674b85e4c90546758d169f3c, type: 3}
+      propertyPath: pacmanEatPellet
+      value: 
+      objectReference: {fileID: 8300000, guid: 7634821e0c6474e58b1aaa1cc574bf34, type: 3}
+    - target: {fileID: 8642820182263400478, guid: d8fff41d674b85e4c90546758d169f3c, type: 3}
+      propertyPath: pacmanEatSuperPellet
+      value: 
+      objectReference: {fileID: 8300000, guid: 7725c9f372ebe4c408e6461bb2c2a0d6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8fff41d674b85e4c90546758d169f3c, type: 3}
 --- !u!1 &514712222
