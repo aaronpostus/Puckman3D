@@ -14,6 +14,7 @@ namespace OttiPostLewis.Lab6
         public LayerMask layerMask;
         private InputAction moveAction;
         public static GameObject playerObj;
+        [SerializeField] public Rigidbody rigidbody;
         float playerSpeed = 4f;
         float raySize;
         public static Transform playerTransform;
@@ -60,6 +61,9 @@ namespace OttiPostLewis.Lab6
                     }  
             }
         }
+        void OnCollisionEnter(Collision c) {
+            Debug.Log("collision");
+        }
 
         private IEnumerator ChangeStateAfterDelay(PacmanState newState, float delay)
         {
@@ -95,7 +99,7 @@ namespace OttiPostLewis.Lab6
             Ray rayLeft = new Ray(playerTransform.position, leftDirection);
             Ray rayForward = new Ray(playerTransform.position, forwardDirection);
             Ray rayBackward = new Ray(playerTransform.position, backwardDirection);
-
+            
             canMoveForward = !Physics.Raycast(rayForward, raySize);
             canMoveBackward = !Physics.Raycast(rayBackward, raySize);
             canMoveRight = !Physics.Raycast(rayRight, raySize);
@@ -134,7 +138,7 @@ namespace OttiPostLewis.Lab6
 
             playerTransform.rotation = targetRotation;
             playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
-
+            //rigidbody.MovePosition(playerTransform.position + (movementDirection * Time.deltaTime * playerSpeed));
 
 
         }
