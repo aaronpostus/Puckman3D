@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace OttiPostLewis.Lab6
 {
+    // authored by aaron post and alex otti
     public class GameManager : MonoBehaviour
     {
          public List<string> levels;
@@ -76,7 +77,12 @@ namespace OttiPostLewis.Lab6
        public void StartNextLevel() {
             currentLevel++;
             if(selectedGameMode == (int) Gamemodes.Story) {
-                SceneManager.LoadScene(levels[currentLevel - 1], LoadSceneMode.Single);
+                if(currentLevel > 2) {
+                    SceneManager.LoadScene("WinMenu", LoadSceneMode.Single);
+                }
+                else {
+                    SceneManager.LoadScene(levels[currentLevel - 1], LoadSceneMode.Single);
+                }
             }
             else {
                 SceneManager.LoadScene(levels[Random.Range(0,levels.Count)]);
