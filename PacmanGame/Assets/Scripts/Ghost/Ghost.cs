@@ -65,11 +65,13 @@ namespace OttiPostLewis.Lab6
         {
             //Note: "Player" tag = pacman
 
-            //if pacman's current state == big pacman
-                //currentState = fleeState;
+            //if pacman's current state == ghost-eating pacman, flee
+            if (MovementControl.currentState == MovementControl.PacmanState.Chase)
+            {
+                currentState = fleeState;
+            }
             
-            //else if
-            if (Physics.Raycast(sight, out RaycastHit hit, sightRange))
+            else if (Physics.Raycast(sight, out RaycastHit hit, sightRange))
             {
                 //cannot enter chase state until it has left/returned home
                 if (hit.collider.CompareTag("Player") && currentState != exitHomeState && currentState != returnHomeState)
@@ -99,8 +101,6 @@ namespace OttiPostLewis.Lab6
 
 
 //TODO:
-
-  //add pacman state checks 
 
   //adjust speeds for each level
 
