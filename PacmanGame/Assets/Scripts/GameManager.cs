@@ -164,11 +164,10 @@ namespace OttiPostLewis.Lab6
             Debug.Log("gm update");
             if (currentGameState == (int) Gamestate.GamePlay)
             {
-                Debug.Log(GameManager.levelManager != null);
-                /**if(levelManager.NumberOfPelletsInLevel() == 0) {
+                if(levelManager.NumberOfPelletsInLevel() == 0) {
 
                     LevelWon();
-                }**/
+                }
             }
             //Update UI Elements
         }
