@@ -1086,14 +1086,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIPrefab: {fileID: 0}
-  pellets: []
   levels:
   - Level1Final
   - Level2
   - Level2
-  movementController: {fileID: 500410660}
   soundManager: {fileID: 106121434}
-  currentGameState: 0
 --- !u!4 &106121432
 Transform:
   m_ObjectHideFlags: 0
@@ -1123,6 +1120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pacmanEating: {fileID: 8300000, guid: 7634821e0c6474e58b1aaa1cc574bf34, type: 3}
   backGroundMusic: {fileID: 8300000, guid: ff6bf3b4553dc4482a3324596d43c2f5, type: 3}
+  pacmanDeath: {fileID: 0}
+  pacmanEatGhost: {fileID: 0}
 --- !u!1001 &108921921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4488,6 +4487,7 @@ GameObject:
   - component: {fileID: 398668615}
   - component: {fileID: 398668614}
   - component: {fileID: 398668616}
+  - component: {fileID: 398668617}
   m_Layer: 0
   m_Name: Portal1
   m_TagString: Untagged
@@ -4536,6 +4536,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPortalLocation: {x: 0, y: 0}
+--- !u!54 &398668617
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398668613}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &404642793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493874, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
@@ -5631,6 +5647,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerToMove: {fileID: 500410659}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &500410662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14744,6 +14763,7 @@ GameObject:
   - component: {fileID: 1402100609}
   - component: {fileID: 1402100608}
   - component: {fileID: 1402100610}
+  - component: {fileID: 1402100611}
   m_Layer: 0
   m_Name: Portal2
   m_TagString: Untagged
@@ -14792,6 +14812,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPortalLocation: {x: 0, y: 0}
+--- !u!54 &1402100611
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402100607}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &1402293456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493874, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
