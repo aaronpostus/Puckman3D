@@ -50,7 +50,7 @@ namespace OttiPostLewis.Lab6 {
             }
         }
         public void ShowPacman(bool shouldShow) {
-            MovementControl.playerToMove.gameObject.SetActive(shouldShow);
+            MovementControl.playerObj.gameObject.SetActive(shouldShow);
         }
         public void ResetGhostAndPacmanPositions() {
             MovementControl.playerTransform.position = GetStartingPacmanLocation();
@@ -58,7 +58,7 @@ namespace OttiPostLewis.Lab6 {
                 ghost.ResetGhost();
                 ghost.gameObject.SetActive(true);
             }
-            MovementControl.playerToMove.SetActive(true);
+            MovementControl.playerObj.SetActive(true);
         }
         public int NumberOfPelletsInLevel() {
             return pelletTransform.childCount;
