@@ -9,6 +9,7 @@ namespace OttiPostLewis.Lab6
         private GameManager gameManager;
         private GameObject pacmanObject;
         MovementControl movementControl;
+
         void Start()
         {
             gameManager = FindObjectOfType<GameManager>();
@@ -16,7 +17,7 @@ namespace OttiPostLewis.Lab6
         }
 
         private void OnTriggerEnter(Collider other)
-        {
+        {   
             if(superPellet) {
 
                 gameManager.ConsumePowerPellet(gameObject);
