@@ -10,7 +10,6 @@ namespace OttiPostLewis.Lab6
     public class GhostFleeState : IGhostState
     {
         private float speed = 2.5f; //speed should be less than pacman's
-        private float timer = 0;
         private NavMeshAgent agent;
         private Vector3 randomPoint;
         private Ghost ghost;
@@ -20,21 +19,18 @@ namespace OttiPostLewis.Lab6
         private float positionThreshold = 0.01f;
         private float newDistance;
         private float currentDistance;
-        private float fleeTime = 6; //equal to pacman's eating state duration
 
         public IGhostState DoState(Ghost ghost, NavMeshAgent agent, Vector3 destination, bool computeInitialDest)
         {
             this.ghost = ghost;
-            this.destination = destination;
             this.agent = agent;
             agent.speed = this.speed * Ghost.multiplier;
             agent.updateRotation = false;
             Flee();
 
-            timer += Time.deltaTime;
-            if (timer > fleeTime)
+            //when pacman changes back to normal state, revert animation and begin wandering
+            if (MovementControl.currentState == MovementControl.PacmanState.Flee)
             {
-                timer = 0;
                 computeDestination = true;
                 RevertAnimation();
                 return ghost.wanderState;
@@ -45,7 +41,7 @@ namespace OttiPostLewis.Lab6
         private void Flee()
         {
             //only set destination once
-            if (computeDestination)
+            if ((Mathf.Abs(ghost.transform.position.x - destination.x) < positionThreshold && Mathf.Abs(ghost.transform.position.z - destination.z) < positionThreshold) || computeDestination)
             {
                 //change to flee animation
                 ChangeAnimation();
@@ -66,7 +62,7 @@ namespace OttiPostLewis.Lab6
                 agent.SetDestination(destination);
                 computeDestination = false;
 
-                //choose another destination once it reaches current destination ???
+                
             }
             NavMeshPath path = agent.path;
             GhostUtility.RotateAtCorners(ghost, path, positionThreshold);
