@@ -43,37 +43,22 @@ namespace OttiPostLewis.Lab6
         private void Start()
         {
             raySize = 0.45f;
+            gm = GameObject.Find("GameManager").GetComponent<GameManager>();
             targetRotation = Quaternion.identity;
             currentState = PacmanState.Flee;
             SetDirections();
-            gm = GameObject.Find("GameManager").GetComponent<GameManager>(); 
-
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if ((other.gameObject.name == "Blinky") || (other.gameObject.name == "Pinky") || (other.gameObject.name == "Inky") || (other.gameObject.name == "Clyde"))
             {
-                switch (currentState)
-                {
-                    case PacmanState.Flee:
-                        gm.Die();
-                        Debug.Log("COLLISION");
-
-                        break;
-                    case PacmanState.Chase:
-
-                        break;
-
-                }
+            
+                    if (currentState == PacmanState.Flee)
+                    {
+                    gm.Die();
+                    }  
             }
-        }
-
-        public void CallFlee()
-        {
-            currentState = PacmanState.Chase;
-            float delay = 6.0f;
-            StartCoroutine(ChangeStateAfterDelay(PacmanState.Flee, delay));
         }
 
         private IEnumerator ChangeStateAfterDelay(PacmanState newState, float delay)
@@ -88,6 +73,12 @@ namespace OttiPostLewis.Lab6
         }
 
 
+        public void CallFlee()
+        {
+            currentState = PacmanState.Chase;
+            float delay = 6.0f;
+            StartCoroutine(ChangeStateAfterDelay(PacmanState.Flee, delay));
+        }
 
         private void SetDirections()
         {
@@ -116,38 +107,45 @@ namespace OttiPostLewis.Lab6
             Debug.DrawRay(rayBackward.origin, backwardDirection * raySize, canMoveBackward ? Color.white : Color.red);
         }
 
+        private void ReadMovementInput()
+        {
+            Vector2 direction = moveAction.ReadValue<Vector2>();
+            Vector3 movementDirection = Vector3.zero;
+            if (direction.x > 0f && canMoveRight)
+            {
+                targetRotation = Quaternion.LookRotation(rightDirection);
+                movementDirection = rightDirection;
+            }
+            else if (direction.x < 0f && canMoveLeft)
+            {
+                targetRotation = Quaternion.LookRotation(leftDirection);
+                movementDirection = leftDirection;
+            }
+            else if (direction.y > 0f && canMoveForward)
+            {
+                targetRotation = Quaternion.LookRotation(forwardDirection);
+                movementDirection = forwardDirection;
+            }
+            else if (direction.y < 0f && canMoveBackward)
+            {
+                targetRotation = Quaternion.LookRotation(backwardDirection);
+                movementDirection = backwardDirection;
+            }
+
+            playerTransform.rotation = targetRotation;
+            playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
+
+
+
+        }
+
         private void Update()
         {
            if (canMove) {
 
                 LockMovement();
 
-                Vector2 direction = moveAction.ReadValue<Vector2>();
-                Vector3 movementDirection = Vector3.zero;
-
-                if (direction.x > 0f && canMoveRight)
-                {
-                    targetRotation = Quaternion.LookRotation(rightDirection);
-                    movementDirection = rightDirection;
-                }
-                else if (direction.x < 0f && canMoveLeft)
-                {
-                    targetRotation = Quaternion.LookRotation(leftDirection);
-                    movementDirection = leftDirection;
-                }
-                else if (direction.y > 0f && canMoveForward)
-                {
-                    targetRotation = Quaternion.LookRotation(forwardDirection);
-                    movementDirection = forwardDirection;
-                }
-                else if (direction.y < 0f && canMoveBackward)
-                {
-                    targetRotation = Quaternion.LookRotation(backwardDirection);
-                    movementDirection = backwardDirection;
-                }
-
-                playerTransform.rotation = targetRotation;
-                playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
+                ReadMovementInput();
             }
        }
     }
