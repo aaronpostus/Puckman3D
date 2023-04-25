@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -18252,6 +18252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clyde
       objectReference: {fileID: 0}
+    - target: {fileID: 742833050451021883, guid: 6c44563c0585a664e8035c4a508d12c6, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 742833050451021885, guid: 6c44563c0585a664e8035c4a508d12c6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -22804,6 +22808,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6530187330187970258, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 870321c7c5c4b8f4a9958fdf4b651e17, type: 3}
 --- !u!1001 &2503031078571041592
@@ -22813,6 +22821,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528617381608157477, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 528617381608157479, guid: 0a1bd1f5dde48ee4481d304ea73242be, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -22874,6 +22886,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7099188925189576691, guid: c553982e436766b47befe22605a33f38, type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 7417030631928762817, guid: c553982e436766b47befe22605a33f38, type: 3}
       propertyPath: m_Name
       value: Pinky
