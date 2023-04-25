@@ -99,7 +99,7 @@ namespace OttiPostLewis.Lab6
             Ray rayLeft = new Ray(playerTransform.position, leftDirection);
             Ray rayForward = new Ray(playerTransform.position, forwardDirection);
             Ray rayBackward = new Ray(playerTransform.position, backwardDirection);
-
+            
             canMoveForward = !Physics.Raycast(rayForward, raySize);
             canMoveBackward = !Physics.Raycast(rayBackward, raySize);
             canMoveRight = !Physics.Raycast(rayRight, raySize);
