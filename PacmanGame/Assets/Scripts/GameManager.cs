@@ -116,6 +116,7 @@ namespace OttiPostLewis.Lab6
             currentGameState = (int) Gamestate.Loading;
             PauseLevel();
             Debug.Log("Level won!");
+            StartNextLevel();
            //Load the scene for the new level
 
 
@@ -127,7 +128,8 @@ namespace OttiPostLewis.Lab6
             PauseLevel();
             if (remainingLives > 0)
             {
-
+                currentGameState = (int) Gamestate.Loading;
+                levelManager.ShowGhosts(false);
                 ResetLevel();
             }
             else
@@ -143,18 +145,14 @@ namespace OttiPostLewis.Lab6
         public void ResetLevel()
         {
             remainingLives--;
-            playerScore = 0;
-
-
         }
 
 
         //  Method to change scene when the game is over
         public void GameOver()
         {
-
-            //Change the scene
-
+            currentGameState = (int) Gamestate.Loading;
+            SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Single);
         }
 
 

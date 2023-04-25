@@ -6,7 +6,7 @@ namespace OttiPostLewis.Lab6
     public class MovementControl : MonoBehaviour
     {
 
-        [SerializeField] private GameObject playerToMove;
+        [SerializeField] public static GameObject playerToMove;
         public static bool canMove = false;
         public LayerMask layerMask;
         private InputAction moveAction;
