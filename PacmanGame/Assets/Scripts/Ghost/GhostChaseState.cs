@@ -20,7 +20,7 @@ namespace OttiPostLewis.Lab6
             this.agent = agent;
             this.destination = destination;
             agent.speed = speed * Ghost.multiplier;
-            agent.updateRotation = true; //?? idk
+            agent.updateRotation = true;
             Chase();
 
             //return chase until ghost location = last known location of pacman
@@ -35,9 +35,6 @@ namespace OttiPostLewis.Lab6
         private void Chase()
         {
             agent.SetDestination(new Vector3(destination.x, ghost.transform.position.y, destination.z)); 
-
-            //do angle stuff? prob not neccessary bc will just be going in a straight line
-
         }
 
     }
