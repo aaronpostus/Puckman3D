@@ -14,6 +14,7 @@ namespace OttiPostLewis.Lab6
         public LayerMask layerMask;
         private InputAction moveAction;
         public static GameObject playerObj;
+        [SerializeField] public Rigidbody rigidbody;
         float playerSpeed = 4f;
         float raySize;
         public static Transform playerTransform;
@@ -59,6 +60,9 @@ namespace OttiPostLewis.Lab6
                     gm.Die();
                     }  
             }
+        }
+        void OnCollisionEnter(Collision c) {
+            Debug.Log("collision");
         }
 
         private IEnumerator ChangeStateAfterDelay(PacmanState newState, float delay)
@@ -134,7 +138,7 @@ namespace OttiPostLewis.Lab6
 
             playerTransform.rotation = targetRotation;
             playerTransform.Translate(movementDirection * Time.deltaTime * playerSpeed, Space.World);
-
+            //rigidbody.MovePosition(playerTransform.position + (movementDirection * Time.deltaTime * playerSpeed));
 
 
         }

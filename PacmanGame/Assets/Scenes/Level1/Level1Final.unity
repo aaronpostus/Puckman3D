@@ -5526,6 +5526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PacmanPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 7145708307692725742, guid: b2c09e7099584442cba88015a2976011, type: 3}
+      propertyPath: rigidbody
+      value: 
+      objectReference: {fileID: 512149097}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2c09e7099584442cba88015a2976011, type: 3}
 --- !u!114 &512149096 stripped
@@ -5539,6 +5543,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437c9cc64fb644c328f779669d71a138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &512149097 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6093165113749141470, guid: b2c09e7099584442cba88015a2976011, type: 3}
+  m_PrefabInstance: {fileID: 512149095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &512443251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493874, guid: 4371bfa8db8d0b0439cd959df49b3361, type: 3}
