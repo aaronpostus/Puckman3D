@@ -1,12 +1,9 @@
-﻿using UnityEngine;
+using UnityEngine;
 using PacmanInput;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine.SceneManagement;
 
 namespace OttiPostLewis.Lab6
 {
-
+    // authored by alex otti
     public class MovementManager : MonoBehaviour
     {
 

@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 namespace OttiPostLewis.Lab6
 {
     public class SoundManager : MonoBehaviour
